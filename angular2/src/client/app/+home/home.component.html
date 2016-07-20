@@ -1,0 +1,21 @@
+<form (submit)="addName()">
+  <input [(ngModel)]="input" name="input" placeholder="Email Address">
+  <button type="submit">Add</button>
+</form>
+
+<table cellspacing="0" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Encrypted</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let email of emails; let index = index;">
+            <td>{{ email }}</td>
+            <td><pre>{{ encrypted[index] }}</pre></td>
+            <td><button (click)="decrypt(encrypted[index])">Decrypt</button></td>
+        </tr>
+    </tbody>
+</table>
