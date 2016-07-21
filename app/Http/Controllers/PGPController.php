@@ -30,7 +30,7 @@ class PGPController extends Controller
     public function decrypt(Request $request) {
         $content = str_replace('↵', '\n', $request->getContent());
 
-        $pass = file_get_contents(base_path('/passphrase-6DD1F3A9.txt'));
+        $pass = file_get_contents(base_path(env('PGP_PASSPHRASE_FILE')));
         $this->gpg->addDecryptKey(env('PGP_KEY'), $pass);
 
         if ($content) {

@@ -1,13 +1,18 @@
 :host {
   display: block;
   padding: 0 16px;
-}
-
-input {
-  width: 250px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0 0 0 8px;
+  md-input {
+    flex: 1;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+  md-card {
+    max-width: 600px;
+    margin: 24px 0;
+    &.result {
+      max-width: 850px;
+    }
+  }
 }

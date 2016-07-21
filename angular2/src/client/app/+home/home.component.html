@@ -1,21 +1,30 @@
-<form (submit)="addName()">
-  <input [(ngModel)]="input" name="input" placeholder="Email Address">
-  <button type="submit">Add</button>
-</form>
+<md-card>
+    <md-card-header>
+        <md-card-title>
+            Encrypt with PGP
+        </md-card-title>
+    </md-card-header>
+    <form (submit)="encrypt()" #singleForm="ngForm">
+      <md-input [(ngModel)]="input" name="input" placeholder="Email Address" required type="email"></md-input>
+      <button md-button type="submit" [disabled]="singleForm.invalid">Encrypt</button>
+    </form>
+</md-card>
 
-<table cellspacing="0" class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Email</th>
-            <th>Encrypted</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let email of emails; let index = index;">
-            <td>{{ email }}</td>
-            <td><pre>{{ encrypted[index] }}</pre></td>
-            <td><button (click)="decrypt(encrypted[index])">Decrypt</button></td>
-        </tr>
-    </tbody>
-</table>
+<md-card *ngIf="result" class="result">
+    <md-card-title>PGP Result</md-card-title>
+    <md-card-subtitle>{{ result.input }}</md-card-subtitle>
+    <md-tab-group>
+        <md-tab>
+            <template md-tab-label>PGP</template>
+            <template md-tab-content>
+                <apgp-copy-container [text]="result.pgp"></apgp-copy-container>
+            </template>
+        </md-tab>
+        <md-tab>
+            <template md-tab-label>Base64</template>
+            <template md-tab-content>
+                <apgp-copy-container class="contain" [text]="result.base64"></apgp-copy-container>
+            </template>
+        </md-tab>
+    </md-tab-group>
+</md-card>

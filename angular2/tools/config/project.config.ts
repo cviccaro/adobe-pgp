@@ -45,12 +45,36 @@ export class ProjectConfig extends SeedConfig {
     // this.mergeObject(this.PLUGIN_CONFIGS['browser-sync'], { ghostMode: false });
 
     // Add package config paths to SystemJS Builder
-    this.SYSTEM_BUILDER_CONFIG.packageConfigPaths = [
-        ...this.SYSTEM_BUILDER_CONFIG.packageConfigPaths,
-    // join(this.PROJECT_ROOT, 'node_modules', '@angular2-material', '*', 'package.json')
+    this.SYSTEM_CONFIG_DEV.packageConfigPaths = [
+      ...this.SYSTEM_CONFIG_DEV.packageConfigPaths,
+      join('/node_modules', '@angular2-material', '*', 'package.json')
     ];
 
     /* Add packages to SystemJS Builder */
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/core'] = {
+      main: 'core.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/button'] = {
+      main: 'button.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/card'] = {
+      main: 'card.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/input'] = {
+      main: 'input.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/icon'] = {
+      main: 'icon.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/tabs'] = {
+      main: 'tabs.js',
+      defaultExtension: 'js'
+    };
     // this.SYSTEM_BUILDER_CONFIG.packages['moment'] = {
     //   main: 'min/moment-with-locales.min.js',
     //   defaultExtension: 'js'
@@ -67,6 +91,8 @@ export class ProjectConfig extends SeedConfig {
 
     this.INJECTABLES = this.NPM_DEPENDENCIES.map(dep => dep.src)
                         .concat(PACKAGES);
+
+    console.log('Config: ', this);
   }
 
 }
