@@ -7,7 +7,7 @@ import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
 
 /**
  * This class represents the main application component. Within the @Routes annotation is the configuration of the
- * applications routes, configuring the paths for the lazy loaded components (HomeComponent, AboutComponent).
+ * applications routes, configuring the paths for the lazy loaded components (HomeComponent, BulkComponent).
  */
 @Component({
   moduleId: module.id,

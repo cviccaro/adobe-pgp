@@ -22,7 +22,7 @@ import {
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './+home/home.component';
-import { AboutComponent } from './+about/about.component';
+import { BulkComponent } from './+bulk/bulk.component';
 
 export function main() {
 
@@ -36,7 +36,7 @@ export function main() {
     beforeEachProviders(() => {
       let config:RouterConfig = [
         {path: '', component: HomeComponent},
-        {path: 'about', component: AboutComponent}
+        {path: 'about', component: BulkComponent}
       ];
 
       return [

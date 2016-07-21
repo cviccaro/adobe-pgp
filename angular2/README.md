@@ -210,7 +210,7 @@ Forks of this project demonstrate how to extend and integrate with other librari
 │       │   │   ├── about.component.e2e-spec.ts
 │       │   │   ├── about.component.html
 │       │   │   ├── about.component.spec.ts
-│       │   │   ├── about.component.ts
+│       │   │   ├── bulk.component.ts
 │       │   │   └── index.ts
 │       │   ├── +home
 │       │   │   ├── home.component.css

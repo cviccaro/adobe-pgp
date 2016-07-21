@@ -1,0 +1,10 @@
+<div class="well"><span>Drop files here</span></div>
+<md-grid-list *ngIf="display && files.length" [cols]="gridConfig.cols" [rowHeight]="gridConfig.rowHeight" [gutterSize]="gridConfig.gutterSize" >
+    <md-grid-tile *ngFor="let file of files; let index = index;">
+        <jpa-file-card
+            [file]="file"
+            [index]="index"
+            (clickedRemove)="handleClickedRemove($event)">
+        </jpa-file-card>
+    </md-grid-tile>
+</md-grid-list>

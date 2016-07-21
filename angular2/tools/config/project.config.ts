@@ -63,6 +63,10 @@ export class ProjectConfig extends SeedConfig {
       main: 'card.js',
       defaultExtension: 'js'
     };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/grid-list'] = {
+      main: 'grid-list.js',
+      defaultExtension: 'js'
+    };
     this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/input'] = {
       main: 'input.js',
       defaultExtension: 'js'

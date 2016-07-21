@@ -1,8 +1,10 @@
 import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 import * as merge from 'merge-stream';
-import { join } from 'path';
-import { INJECTABLES, ENV, APP_DEST } from '../../config';
+import * as path from 'path';
+import { INJECTABLES, ENV, APP_DEST, TMP_DIR } from '../../config';
+import * as fs from 'fs';
+const join = path.join;
 
 const plugins = <any>gulpLoadPlugins();
 
@@ -14,8 +16,20 @@ const plugins = <any>gulpLoadPlugins();
  *
  * @returns {NodeJS.ReadWriteStream}
  */
+function copyNodeModulesTemp() {
+  let i = INJECTABLES.filter(glob => {
+    if (glob.indexOf('*') === -1) {
+      return !fs.existsSync(join(TMP_DIR, 'node_modules', glob));
+    } else {
+      return !fs.existsSync(join(TMP_DIR, 'node_modules', path.dirname(glob)));
+    }
+  });
+
+  return gulp.src(i, { cwd: 'node_modules/**' })
+    .pipe(gulp.dest(join(TMP_DIR, 'node_modules')));
+}
 function copyNodeModules() {
-  return gulp.src(INJECTABLES, { cwd: 'node_modules/**' })
+  return gulp.src(join(TMP_DIR, 'node_modules', '**', '*'))
     .pipe(gulp.dest('../public/node_modules'));
 }
 
@@ -38,6 +52,6 @@ function copyBuiltFiles() {
 
 let stream = ENV === 'prod' ?
   copyBuiltFiles()
-  : merge(copyNodeModules(), copyBuiltFiles());
+  : merge(copyNodeModulesTemp(), copyNodeModules(), copyBuiltFiles());
 
 export = () => stream;

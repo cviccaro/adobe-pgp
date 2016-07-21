@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  padding: 0 16px;
+
+  md-card {
+    margin-bottom: 36px;
+  }
+  .upload-card {
+    max-width: 660px;
+  }
+  .apgp-file-dropzone {
+    max-width: 600px;
+  }
+  jpa-file-card {
+    width: 100%;
+  }
+
+  .form-actions {
+    width: 100%;
+    text-align: right;
+    .submit {
+      text-align: center;
+    }
+  }
+}
