@@ -19,9 +19,39 @@ class PGPController extends Controller
         $content = $request->getContent();
 
         if ($content) {
-            $this->gpg->addEncryptKey(env('PGP_KEY'));
+            return ['encrypted' => $this->_encrypt($content)];
+        }
 
-            return ['encrypted' => $this->gpg->encrypt($content)];
+        abort(400);
+    }
+
+    protected function _encrypt($content) {
+        $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
+        $this->gpg->addEncryptKey(env('PGP_KEY'));
+        $this->gpg->addSignKey(env('PGP_KEY'), $pass);
+
+        return $this->gpg->encryptAndSign($content);
+    }
+
+    public function encryptMany(Request $request) {
+        if ($request->has('lists')) {
+            $lists = $request->get('lists');
+            \Log::info('Lists: ' . print_r($lists, true));
+
+            $output = [];
+
+            foreach($lists as $list) {
+                $data = $list['data'];
+                $output[$list['file']] = [];
+
+                \Log::info('List data: ' . print_r($data, true));
+                foreach($data as $datum) {
+                    $email = array_values($datum)[0];
+                    $output[$list['file']][$email] = $this->_encrypt($email);
+                }
+            }
+
+            return response($output);
         }
 
         abort(400);
@@ -30,7 +60,7 @@ class PGPController extends Controller
     public function decrypt(Request $request) {
         $content = str_replace('↵', '\n', $request->getContent());
 
-        $pass = file_get_contents(base_path(env('PGP_PASSPHRASE_FILE')));
+        $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
         $this->gpg->addDecryptKey(env('PGP_KEY'), $pass);
 
         if ($content) {

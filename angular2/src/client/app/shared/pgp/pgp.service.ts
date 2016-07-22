@@ -17,4 +17,9 @@ export class PgpService {
     return this.http.post('/api/encrypt', input)
       .map(res => res.json());
   }
+
+  encryptMany(lists: any[]) {
+    return this.http.post('/api/encrypt-many', {lists: lists})
+      .map(res => res.json());
+  }
 }

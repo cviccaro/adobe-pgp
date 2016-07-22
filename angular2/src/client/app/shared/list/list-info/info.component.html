@@ -1,0 +1,37 @@
+<div class="info-header">
+    <h4>{{ index+1 }})</h4>
+    <jpa-file-card [file]="list.managedFile" [index]="list.managedFile.index" [actions]="false"></jpa-file-card>
+</div>
+<div class="cards">
+    <md-card class="data">
+        <md-card-title>Emails within</md-card-title>
+        <md-card-content>
+            <ul class="lists-list">
+                <li *ngFor="let data of list.data">
+                    {{ getData(data) }}
+                </li>
+            </ul>
+        </md-card-content>
+    </md-card>
+    <md-card class="encrypted" *ngIf="list.encrypted">
+        <md-card-title>Encrypted</md-card-title>
+        <md-card-content>
+            <table cellspacing="0" class="table table-bordered table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Encrypted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let encrypted of list.encrypted">
+                        <th>{{ encrypted.email }}</th>
+                        <td>
+                            <apgp-copy-container [text]="encrypted.encrypted"></apgp-copy-container>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-card-content>
+    </md-card>
+    </div>

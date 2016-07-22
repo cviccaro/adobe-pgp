@@ -2,6 +2,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 
 import { BulkRoutes } from './+bulk/index';
 import { HomeRoutes } from './+home/index';
+import {ListsGuard} from "./shared/list/lists.guard";
 
 const routes: RouterConfig = [
   ...HomeRoutes,
@@ -10,4 +11,5 @@ const routes: RouterConfig = [
 
 export const APP_ROUTER_PROVIDERS = [
   provideRouter(routes),
+  ListsGuard
 ];

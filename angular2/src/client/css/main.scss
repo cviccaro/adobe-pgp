@@ -18,3 +18,30 @@ div {
 button md-icon {
   vertical-align: middle;
 }
+
+.form-actions {
+  width: 100%;
+  text-align: right;
+  .submit {
+    text-align: center;
+  }
+}
+
+.light,
+h1.light,
+h2.light,
+h3.light,
+h4.light,
+h5.light {
+  color: rgba(0,0,0,.54);
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+}

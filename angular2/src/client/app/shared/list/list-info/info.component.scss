@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  .cards {
+    display: flex;
+    flex-direction: row;
+    padding: 0 38px;
+  }
+  md-card.data {
+    //margin-left: 60px;
+    md-card-title {
+      font-size: 16px;
+    }
+    ul {
+      margin: 0;
+    }
+  }
+  md-card.encrypted {
+    margin-left:60px;
+    max-width: 800px;
+    md-card-title {
+      font-size: 16px;
+    }
+    pre {
+      border: none;
+      font-size: 12px;
+    }
+  }
+  .info-header {
+    display: flex;
+    flex-direction: row;
+    jpa-file-card {
+      flex: 1;
+      margin-bottom: 24px;
+      margin-left: 24px;
+    }
+  }
+}

@@ -29,6 +29,9 @@ Route::get('test', function() {
 
 Route::post('/api/decrypt', 'PGPController@decrypt');
 Route::post('/api/encrypt', 'PGPController@encrypt');
+Route::post('/api/encrypt-many', 'PGPController@encryptMany');
+
+Route::post('/api/upload-list', 'ListController@uploadAndParse');
 
 Route::any('/{page?}/{subpage?}/{id?}', function () {
     return view('angular');

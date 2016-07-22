@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
         this.result = {
           input: input,
           pgp: res.encrypted,
-          base64: btoa(res.encrypted)
+          base64: btoa(<string>res.encrypted)
         };
       })
 
