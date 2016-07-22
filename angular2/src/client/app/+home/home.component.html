@@ -1,12 +1,12 @@
 <md-card>
     <md-card-header>
         <md-card-title>
-            Encrypt with PGP
+            Sign with PGP
         </md-card-title>
     </md-card-header>
-    <form (submit)="encrypt()" #singleForm="ngForm">
+    <form (submit)="sign()" #singleForm="ngForm">
       <md-input [(ngModel)]="input" name="input" placeholder="Email Address" required type="email"></md-input>
-      <button md-button type="submit" [disabled]="singleForm.invalid">Encrypt</button>
+      <button md-button type="submit" [disabled]="singleForm.invalid">Sign</button>
     </form>
 </md-card>
 
@@ -15,7 +15,7 @@
     <md-card-subtitle>{{ result.input }}</md-card-subtitle>
     <md-tab-group>
         <md-tab>
-            <template md-tab-label>PGP</template>
+            <template md-tab-label>Armored</template>
             <template md-tab-content>
                 <apgp-copy-container [text]="result.pgp"></apgp-copy-container>
             </template>

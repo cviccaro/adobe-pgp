@@ -14,6 +14,7 @@ export * from './cache/index';
 export * from './list/index';
 export * from './copy-container/index';
 export * from './file-dropzone/index';
+export * from './panel2/index';
 
 export const APP_SERVICES = [
   PgpService, ListService, CacheService

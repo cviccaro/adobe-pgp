@@ -7,19 +7,27 @@ export class PgpService {
   constructor(public http: Http) { }
 
   decrypt(input: string) {
-    console.log('Decrypt this string: ', input);
     return this.http.post('/api/decrypt', input)
       .map(res => res.json());
   }
 
   encrypt(input: string) {
-    console.log('Encrypt this string: ', input);
     return this.http.post('/api/encrypt', input)
       .map(res => res.json());
   }
 
   encryptMany(lists: any[]) {
     return this.http.post('/api/encrypt-many', {lists: lists})
+      .map(res => res.json());
+  }
+
+  sign(input: string) {
+    return this.http.post('/api/sign', input)
+      .map(res => res.json());
+  }
+
+  signMany(lists: any[]) {
+    return this.http.post('/api/sign-many', {lists: lists})
       .map(res => res.json());
   }
 }

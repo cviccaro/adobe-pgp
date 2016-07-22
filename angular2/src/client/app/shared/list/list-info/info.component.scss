@@ -36,4 +36,37 @@
       margin-left: 24px;
     }
   }
+  jpa-panel2-bar-subtitle {
+    height: 36px;
+    button {
+      position: relative;
+      top: -5px;
+    }
+  }
+  jpa-panel2-content {
+    display: block;
+    padding-top: 36px;
+  }
+  table.table {
+    td {
+      vertical-align: middle;
+      &.data-preview {
+        padding: 0;
+        apgp-copy-container {
+          max-width: 100%;
+          pre {
+            border: none;
+            background: inherit;
+          }
+        }
+      }
+      &.base64-preview {
+        apgp-copy-container {
+          pre {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
 }

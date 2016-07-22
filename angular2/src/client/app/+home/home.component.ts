@@ -44,19 +44,19 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Encrypts the form value
+   * Signs the form value
    * @return {boolean} false to prevent default form submit behavior to refresh the page.
    */
-  encrypt(): boolean {
+  sign(): boolean {
     let input = this.input;
-    this.pgp.encrypt(this.input)
-      .subscribe(res => {
+    this.pgp.sign(this.input)
+      .subscribe((res: any) => {
         this.result = {
           input: input,
-          pgp: res.encrypted,
-          base64: btoa(<string>res.encrypted)
+          pgp: res.armored,
+          base64: res.base64
         };
-      })
+      });
 
     this.input = '';
 
