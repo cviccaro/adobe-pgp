@@ -1,4 +1,4 @@
-import {Component, ViewChildren, QueryList} from '@angular/core';
+import {Component, ViewChildren, QueryList, AfterViewInit} from '@angular/core';
 import {CacheService} from "../../shared/cache/cache.service";
 import {ListInfoComponent} from "../../shared/list/list-info/info.component";
 import {ManagedFile} from "../../shared/file-dropzone/file";
@@ -15,7 +15,7 @@ import {PanelComponent} from "../../shared/panel2/panel2.component";
   styleUrls: [ './preview.component.css' ],
   directives: [ ListInfoComponent, MdButton, MdIcon, PanelGroupComponent, PanelComponent ]
 })
-export class BulkPreviewComponent {
+export class BulkPreviewComponent implements AfterViewInit {
   lists: any[] = [];
   files: ManagedFile[] = [];
   submitted = false;
@@ -61,7 +61,7 @@ export class BulkPreviewComponent {
         }
         this.bulkDownloadUrl = res.url;
         this.submitted = true;
-      })
+      });
   }
 
   downloadAll() {

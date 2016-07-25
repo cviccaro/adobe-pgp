@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
-import { NameListService } from '../shared/index';
 import {PgpService} from "../shared/pgp/pgp.service";
 import {MdInput} from "@angular2-material/input/input";
 import {MdButton} from "@angular2-material/button/button";
 import {MdCard} from "@angular2-material/card/card";
 import {MD_TABS_DIRECTIVES} from "@angular2-material/tabs/tabs";
-import {MD_ICON_DIRECTIVES} from "@angular2-material/icon/icon";
-import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
 import {CopyContainerComponent} from "../shared/copy-container/copy-container.component";
 
 /**
@@ -70,6 +67,6 @@ export class HomeComponent implements OnInit {
   decrypt(encrypted: string) {
     this.pgp.decrypt(encrypted).subscribe(res => {
       console.log('Decrypted ' + encrypted + ' to ' + res);
-    })
+    });
   }
 }

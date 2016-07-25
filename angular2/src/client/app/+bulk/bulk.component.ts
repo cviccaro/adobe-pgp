@@ -28,14 +28,14 @@ import {Router} from "@angular/router";
   ]
 })
 export class BulkComponent {
+  @ViewChild(FileDropzoneComponent) dropzone : FileDropzoneComponent;
+
   constructor(
     public pgp: PgpService,
     public list: ListService,
     public cache: CacheService,
     public router: Router
   ) { }
-
-  @ViewChild(FileDropzoneComponent) dropzone : FileDropzoneComponent;
 
   preview() {
     console.log('Preview! ', this.dropzone.files);

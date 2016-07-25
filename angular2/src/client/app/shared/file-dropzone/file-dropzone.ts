@@ -2,7 +2,6 @@ import {Component, OnInit, HostListener, HostBinding, ElementRef, Input} from '@
 import {ManagedFile} from "./file";
 import {FileCardComponent} from "./file-card/file-card.component";
 import {MD_GRID_LIST_DIRECTIVES} from "@angular2-material/grid-list/grid-list";
-import {MdCard} from "@angular2-material/card/card";
 
 @Component({
   moduleId: module.id,
@@ -106,7 +105,4 @@ export class FileDropzoneComponent implements OnInit {
     this.files.push(managedFile);
   }
 
-  removeFile(file: ManagedFile) {
-
-  }
 }
