@@ -12,7 +12,8 @@ export class ProjectConfig extends SeedConfig {
 
   constructor() {
     super();
-    // this.APP_TITLE = 'Put name of your app here';
+
+    this.APP_TITLE = 'Adobe PGP Unsubscribe';
 
     /* Enable SCSS support */
     this.ENABLE_SCSS = true;

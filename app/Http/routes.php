@@ -11,6 +11,14 @@
 |
 */
 
+Route::get('test', function() {
+	$gpg = new Crypt_GPG();
+	$gpg->addEncryptKey(env('PGP_KEY'));
+	$gpg->addSignKey(env('PGP_KEY'), '1w2bam&litt');
+	$signed = $gpg->sign('wtf');
+	return response($signed);
+});
+
 Route::post('/api/decrypt', 'PGPController@decrypt');
 Route::post('/api/encrypt', 'PGPController@encrypt');
 Route::post('/api/sign', 'PGPController@sign');

@@ -142,7 +142,7 @@ class PGPController extends Controller
         $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
         $this->gpg->addSignKey(env('PGP_KEY'), $pass);
 
-        return $this->gpg->sign($content, $armor);
+        return $this->gpg->sign($content, \Crypt_GPG::SIGN_MODE_NORMAL, $armor);
     }
 
     protected function _encrypt($content, $armor = true) {
