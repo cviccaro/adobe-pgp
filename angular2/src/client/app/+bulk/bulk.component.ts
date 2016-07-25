@@ -38,10 +38,10 @@ export class BulkComponent {
   ) { }
 
   preview() {
-    console.log('Preview! ', this.dropzone.files);
+    //console.log('Preview! ', this.dropzone.files);
     this.list.uploadAndParse(this.dropzone.files)
       .subscribe((res: any) => {
-        console.log('Response: ', res);
+        //console.log('Response: ', res);
         this.cache.store('lists', res.lists);
         this.cache.store('files', this.dropzone.files);
         this.router.navigate(['/bulk/preview']);

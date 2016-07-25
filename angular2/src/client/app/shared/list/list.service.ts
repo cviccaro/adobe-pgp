@@ -8,7 +8,7 @@ export class ListService {
   constructor(public http: Http) { }
 
   uploadAndParse(files: ManagedFile[]) {
-    console.log('upload and parse! ', files);
+    //console.log('upload and parse! ', files);
     let form = new FormData();
 
     files.forEach((file: ManagedFile, i: number) => {

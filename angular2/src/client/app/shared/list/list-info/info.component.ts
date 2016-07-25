@@ -1,4 +1,4 @@
-import {Component, Input, AfterViewInit, ViewChild} from '@angular/core';
+import {Component, Input, ViewChild} from '@angular/core';
 import {FileCardComponent} from "../../file-dropzone/file-card/file-card.component";
 import {MdCard} from "@angular2-material/card/card";
 import {CopyContainerComponent} from "../../copy-container/copy-container.component";
@@ -15,22 +15,18 @@ import {MD_TABS_DIRECTIVES} from "@angular2-material/tabs/tabs";
   styleUrls: [ './info.component.css' ],
   directives: [ FileCardComponent, MdCard, MdButton, MdIcon, CopyContainerComponent, PANEL2_DIRECTIVES, MD_TABS_DIRECTIVES ]
 })
-export class ListInfoComponent implements AfterViewInit {
+export class ListInfoComponent {
   @Input() list: any;
   @Input() index: number;
 
   @ViewChild(PanelComponent) panel: PanelComponent;
-
-  ngAfterViewInit() {
-    console.log('ListInfoComponent view initialized', this);
-  }
 
   getData(data: { [key: string] : string } ) {
     return data[Object.keys(data)[0]];
   }
 
   expandPanel() {
-    console.log('expand panel!');
+    //console.log('expand panel!');
     if ( !this.panel.expanded ) this.panel.expanded = true;
   }
 

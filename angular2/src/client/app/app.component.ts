@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
-import { Config, NameListService, NavbarComponent, ToolbarComponent } from './shared/index';
+import { NameListService, NavbarComponent, ToolbarComponent } from './shared/index';
 import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
 
 /**
@@ -17,6 +17,6 @@ import {MdIconRegistry} from "@angular2-material/icon/icon-registry";
 })
 export class AppComponent {
   constructor() {
-    console.log('Environment config', Config);
+    //console.log('Environment config', Config);
   }
 }

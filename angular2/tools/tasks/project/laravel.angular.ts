@@ -2,7 +2,7 @@ import * as gulp from 'gulp';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 import * as merge from 'merge-stream';
 import * as path from 'path';
-import { INJECTABLES, ENV, APP_DEST, TMP_DIR } from '../../config';
+import { INJECTABLES, ENV, APP_DEST, TMP_DIR, APP_SRC } from '../../config';
 import * as fs from 'fs';
 const join = path.join;
 
@@ -33,6 +33,11 @@ function copyNodeModules() {
     .pipe(gulp.dest('../public/node_modules'));
 }
 
+function copyHtAccess() {
+  return gulp.src(join(APP_SRC, '.htaccess'))
+    .pipe(gulp.dest('../public'));
+}
+
 /**
  * Copy built files and rename and move
  * index.html to views folder
@@ -51,7 +56,7 @@ function copyBuiltFiles() {
 }
 
 let stream = ENV === 'prod' ?
-  copyBuiltFiles()
-  : merge(copyNodeModulesTemp(), copyNodeModules(), copyBuiltFiles());
+  merge(copyBuiltFiles(), copyHtAccess())
+  : merge(copyNodeModulesTemp(), copyNodeModules(), copyBuiltFiles(), copyHtAccess());
 
 export = () => stream;

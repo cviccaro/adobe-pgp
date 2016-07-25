@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
 import {PgpService} from "../shared/pgp/pgp.service";
@@ -18,7 +18,7 @@ import {CopyContainerComponent} from "../shared/copy-container/copy-container.co
   styleUrls: ['home.component.css'],
   directives: [REACTIVE_FORM_DIRECTIVES, MdInput, MdButton, MdCard, MD_TABS_DIRECTIVES, CopyContainerComponent]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   input: string;
   errorMessage: string;
@@ -32,13 +32,6 @@ export class HomeComponent implements OnInit {
    * @param {PgpService} pgp - The injected PgpService.
    */
   constructor(public pgp: PgpService) {}
-
-  /**
-   * On Init
-   */
-  ngOnInit() {
-    console.log('HomeComponent initialized', this);
-  }
 
   /**
    * Signs the form value

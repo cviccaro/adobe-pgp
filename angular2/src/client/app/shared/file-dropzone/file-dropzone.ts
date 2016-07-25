@@ -22,9 +22,7 @@ export class FileDropzoneComponent implements OnInit {
   private gridConfigDefaults = {cols: 4, rowHeight: '16:9', gutterSize: '8px'};
   private draggingOver = false;
 
-  constructor(public el: ElementRef) {
-    console.log('FileDropzoneDirective constructed.', this);
-  }
+  constructor(public el: ElementRef) { }
 
   ngOnInit() {
     this.gridConfig = Object.assign({}, this.gridConfigDefaults, this.gridConfig);
@@ -38,7 +36,7 @@ export class FileDropzoneComponent implements OnInit {
 
   @HostListener('dragover', ['$event'])
   onDragOver(evt) {
-    console.log('onDragOver', evt);
+    //console.log('onDragOver', evt);
     this.draggingOver = true;
     let transfer = evt.dataTransfer ? evt.dataTransfer : evt.originalEvent.dataTransfer;
     transfer.dropEffect = 'copy';
@@ -48,7 +46,7 @@ export class FileDropzoneComponent implements OnInit {
 
   @HostListener('dragend', ['$event'])
   onDragEnd(evt) {
-    console.log('onDragEnd', evt);
+    //console.log('onDragEnd', evt);
     this.draggingOver = false;
 
     return false;
@@ -56,7 +54,7 @@ export class FileDropzoneComponent implements OnInit {
 
   @HostListener('dragleave', ['$event'])
   onDragLeave(evt) {
-    console.log('onDragLeave', evt);
+    //console.log('onDragLeave', evt);
     this.draggingOver = false;
 
     return false;
@@ -71,7 +69,7 @@ export class FileDropzoneComponent implements OnInit {
     let files = evt.target['files'] || evt['dataTransfer']['files'];
 
     this.readFiles(files);
-    console.log('onFileDrop', files);
+    //console.log('onFileDrop', files);
 
     return false;
   }

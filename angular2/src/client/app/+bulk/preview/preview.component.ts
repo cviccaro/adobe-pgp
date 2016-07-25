@@ -1,4 +1,4 @@
-import {Component, ViewChildren, QueryList, AfterViewInit} from '@angular/core';
+import {Component, ViewChildren, QueryList} from '@angular/core';
 import {CacheService} from "../../shared/cache/cache.service";
 import {ListInfoComponent} from "../../shared/list/list-info/info.component";
 import {ManagedFile} from "../../shared/file-dropzone/file";
@@ -15,7 +15,7 @@ import {PanelComponent} from "../../shared/panel2/panel2.component";
   styleUrls: [ './preview.component.css' ],
   directives: [ ListInfoComponent, MdButton, MdIcon, PanelGroupComponent, PanelComponent ]
 })
-export class BulkPreviewComponent implements AfterViewInit {
+export class BulkPreviewComponent {
   lists: any[] = [];
   files: ManagedFile[] = [];
   submitted = false;
@@ -32,22 +32,18 @@ export class BulkPreviewComponent implements AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
-    console.log('BulkPreviewComponent View Initialized', this);
-  }
-
   submit() {
-    console.log('Submit! ', { lists: this.lists });
-    this.listCmps.forEach(cmp => cmp.expandPanel());
+    //console.log('Submit! ', { lists: this.lists });
+    //this.listCmps.forEach(cmp => cmp.expandPanel());
     this.pgp.signMany(this.lists)
       .subscribe(res => {
-        console.log('Response from signMany: ', res);
+       // console.log('Response from signMany: ', res);
         for (let file in res.lists) {
           let list = this.lists.find(list => list.file === file);
           let signed = res.lists[file].data;
           let url = res.lists[file].url;
 
-          console.log({signed: signed, url: url});
+          //console.log({signed: signed, url: url});
 
           let signedData = [];
 
@@ -57,7 +53,7 @@ export class BulkPreviewComponent implements AfterViewInit {
 
           list.signed = { data: signedData, url: url };
 
-          console.log(list);
+          //console.log(list);
         }
         this.bulkDownloadUrl = res.url;
         this.submitted = true;
