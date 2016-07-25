@@ -50,6 +50,11 @@ export class ProjectConfig extends SeedConfig {
       join('/node_modules', '@angular2-material', '*', 'package.json')
     ];
 
+    this.SYSTEM_BUILDER_CONFIG.packageConfigPaths = [
+      ...this.SYSTEM_BUILDER_CONFIG.packageConfigPaths,
+      join(this.PROJECT_ROOT, 'node_modules', '@angular2-material', '*', 'package.json')
+    ];
+
     /* Add packages to SystemJS Builder */
     this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/core'] = {
       main: 'core.js',
