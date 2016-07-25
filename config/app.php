@@ -160,6 +160,8 @@ return [
 
         Collective\Bus\BusServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+
+        Chumper\Zipper\ZipperServiceProvider::class
     ],
 
     /*
@@ -207,6 +209,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Zipper' => Chumper\Zipper\Zipper::class
     ],
 
 ];

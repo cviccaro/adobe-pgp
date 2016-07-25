@@ -1,33 +1,30 @@
 <jpa-panel2>
     <jpa-panel2-bar>
-        <jpa-panel2-bar-title>{{ list.managedFile.filename }}</jpa-panel2-bar-title>
-        <jpa-panel2-bar-subtitle>
-            {{ list.data.length }} emails within
-            <button md-raised-button color="accent" *ngIf="list.signed" (click)="download(list.signed.url, $event)">
-                <md-icon>file_download</md-icon>&nbsp;&nbsp;Download as CSV
+        <jpa-panel2-bar-title>
+            {{ list.managedFile.filename }}
+            <button md-icon-button color="accent" *ngIf="list.signed" (click)="download(list.signed.url, $event)" title="Download {{ list.managedFile.filename }}">
+                <md-icon>file_download</md-icon>
             </button>
-        </jpa-panel2-bar-subtitle>
+        </jpa-panel2-bar-title>
+        <jpa-panel2-bar-subtitle>{{ list.data.length }} emails within</jpa-panel2-bar-subtitle>
     </jpa-panel2-bar>
-    <jpa-panel2-content>
-        <table cellspacing="0" class="table table-bordered table-striped table-condensed">
-            <thead>
-                <tr>
-                    <th>Email</th>
-                    <th *ngIf="list.signed">Armored</th>
-                    <th *ngIf="list.signed">Base64</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let data of list.data; let index = index;">
-                    <td>{{ getData(data) }}</td>
-                    <td *ngIf="list.signed" class="data-preview">
+    <jpa-panel2-content class="row">
+        <div class="col-md-4" *ngFor="let data of list.data; let index = index;">
+            <h4>{{ getData(data) }}</h4>
+            <md-tab-group *ngIf="list.signed">
+                <md-tab>
+                    <template md-tab-label>Armored</template>
+                    <template md-tab-content>
                         <apgp-copy-container [text]="list.signed.data[index].signed.armored"></apgp-copy-container>
-                    </td>
-                    <td *ngIf="list.signed" class="data-preview base64-preview">
-                        <apgp-copy-container [text]="list.signed.data[index].signed.base64"></apgp-copy-container>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </template>
+                </md-tab>
+                <md-tab>
+                    <template md-tab-label>Base64</template>
+                    <template md-tab-content>
+                        <apgp-copy-container class="contain" [text]="list.signed.data[index].signed.base64"></apgp-copy-container>
+                    </template>
+                </md-tab>
+            </md-tab-group>
+        </div>
     </jpa-panel2-content>
 </jpa-panel2>

@@ -1,8 +1,5 @@
 <h3 class="page-title">Bulk Upload</h3>
 <h4 class="light page-subtitle">{{ lists.length }} Lists</h4>
-<jpa2-panel-group>
-    <apgp-list-info *ngFor="let list of lists; let index = index;" [list]="list" [index]="index"></apgp-list-info>
-</jpa2-panel-group>
 <div class="form-actions">
     <button md-raised-button color="primary" class="submit" (click)="submit()">
         <md-icon>import_export</md-icon>&nbsp;&nbsp;Sign All Lists
@@ -11,3 +8,6 @@
         <md-icon>file_download</md-icon>&nbsp;&nbsp;Download Bulk Encrypted
     </button>
 </div>
+<jpa2-panel-group>
+    <apgp-list-info *ngFor="let list of lists; let index = index;" [list]="list" [index]="index"></apgp-list-info>
+</jpa2-panel-group>

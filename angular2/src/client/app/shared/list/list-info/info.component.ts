@@ -6,13 +6,14 @@ import {PANEL2_DIRECTIVES} from "../../panel2/index";
 import {PanelComponent} from "../../panel2/panel2.component";
 import {MdIcon} from "@angular2-material/icon/icon";
 import {MdButton} from "@angular2-material/button/button";
+import {MD_TABS_DIRECTIVES} from "@angular2-material/tabs/tabs";
 
 @Component({
   moduleId: module.id,
   selector: 'apgp-list-info',
   templateUrl: './info.component.html',
   styleUrls: [ './info.component.css' ],
-  directives: [ FileCardComponent, MdCard, MdButton, MdIcon, CopyContainerComponent, PANEL2_DIRECTIVES ]
+  directives: [ FileCardComponent, MdCard, MdButton, MdIcon, CopyContainerComponent, PANEL2_DIRECTIVES, MD_TABS_DIRECTIVES ]
 })
 export class ListInfoComponent implements AfterViewInit {
   @Input() list: any;

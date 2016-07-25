@@ -84,11 +84,16 @@ class PGPController extends Controller
             $files = [];
 
             $output = ['lists' => [], 'url' => ''];
+            $zipper = new \Chumper\Zipper\Zipper();
+
+            $bulk_export_filename = 'bulk-export-' . time() . '.zip';
+
+            $zip = $zipper->make(storage_path('exports/' . $bulk_export_filename));
 
             foreach($lists as $list) {
                 $data = $list['data'];
-                $filename = $list['file'];
-                $output['lists'][$filename] = [
+                $list_filename = $list['file'];
+                $output['lists'][$list_filename] = [
                     'data' => [],
                     'url' => ''
                 ];
@@ -98,7 +103,7 @@ class PGPController extends Controller
                 foreach($data as $datum) {
                     $email = array_values($datum)[0];
                     $base64 = base64_encode($this->_sign($email, false));
-                    $output['lists'][$filename]['data'][$email] = [
+                    $output['lists'][$list_filename]['data'][$email] = [
                         'armored' => $this->_sign($email),
                         'base64' => $base64
                     ];
@@ -106,16 +111,20 @@ class PGPController extends Controller
                     $out_file_rows[] = ['email' => $email, 'base64' => $base64];
                 }
 
-                $created = \Excel::create($list['file'], function($excel) use ($out_file_rows) {
+                $created = \Excel::create($list_filename, function($excel) use ($out_file_rows) {
                      $excel->sheet('Sheet 1', function($sheet) use ($out_file_rows) {
                         $sheet->fromArray($out_file_rows);
                      });
                 })->store('csv');
 
-                $output['lists'][$filename]['url'] = url('api/exports/' . $filename);
-                $output['url'] = url('api/exports/bulk-export-' . time() . '.zip');
-                $files[] = $filename;
+                \Log::info('Adding file to zip ' . storage_path('exports/' . $list_filename . '.csv'));
+
+                $zip->add(storage_path('exports/' . $list_filename . '.csv'));
+
+                $output['lists'][$list_filename]['url'] = url('api/exports/' . $list_filename);
             }
+
+            $output['url'] = url('api/exports/' . $bulk_export_filename);
 
             return response($output);
         }
@@ -124,7 +133,9 @@ class PGPController extends Controller
     }
 
     public function getExport(Request $request, $filename) {
-        return response()->download(storage_path('exports/'. $filename . '.csv'));
+        $path = storage_path('exports/'. $filename . '.csv');
+        if ( !file_exists($path) ) $path = storage_path('exports/'. $filename);
+        return response()->download($path);
     }
 
     protected function _sign($content, $armor = true) {
