@@ -50,8 +50,8 @@ export class ListInfoComponent implements OnInit, OnChanges {
 
   private _showData: boolean = false;
 
-  ngOnInit(){
-    if (this.list && this.list.data && this.list.data.length){
+  ngOnInit() {
+    if (this.list && this.list.data && this.list.data.length) {
       this.showData = true;
       this.list.data.sort((a,b) => {
         return a.email.localeCompare(b.email);
@@ -78,7 +78,7 @@ export class ListInfoComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.hasOwnProperty('hasData')) {
       if (changes['hasData'].currentValue) {
-        if (this.list.data.length <= 50){
+        if (this.list.data.length <= 50) {
           this.stage = 2;
         }
       }
