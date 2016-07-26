@@ -1,0 +1,54 @@
+:host {
+  md-list,md-list[dense] {
+    md-list-item {
+      h3[md-line] {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      p[md-line] {
+        color: #999;
+      }
+      .md-list-text {
+        width: auto;
+      }
+      .list-status {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 64px;
+        .list-percent {
+          font-size: 40px;
+          font-weight: 300;
+          align-self: center;
+          margin-right: 16px;
+        }
+        .list-progress-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .list-progress,
+          .list-total {
+            width: 100%;
+            text-align: left;
+          }
+          .list-progress {
+            font-size: 18px;
+          }
+          .list-total {
+            color: #999;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .success {
+      color: #009688;
+    }
+    .pending {
+      width: 24px;
+      height: 24px;
+      margin-right: 16px;
+    }
+  }
+}

@@ -28,6 +28,10 @@ button md-icon {
   }
 }
 
+.filler {
+  flex: 1 1 auto;
+}
+
 .light,
 h1.light,
 h2.light,
@@ -45,4 +49,39 @@ h5.light {
 .page-subtitle {
   font-size: 14px;
   font-weight: normal;
+}
+
+.app-progress {
+  height: 2px!important;
+  margin-left: 0;
+  &[hidden] {
+    display: none;
+  }
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+md-icon.spin {
+  animation: fa-spin 2s infinite linear;
+  -webkit-animation: fa-spin 2s infinite linear;
 }

@@ -13,7 +13,7 @@ export class ProjectConfig extends SeedConfig {
   constructor() {
     super();
 
-    this.APP_TITLE = 'Adobe PGP Unsubscribe';
+    this.APP_TITLE = 'Adobe PGP Generator';
 
     /* Enable SCSS support */
     this.ENABLE_SCSS = true;
@@ -29,7 +29,7 @@ export class ProjectConfig extends SeedConfig {
     // Add `NPM` third-party libraries to be injected/bundled.
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
-      // { src: 'angular2-toaster/lib/toaster.css', inject: true }
+      { src: 'angular2-toaster/lib/toaster.css', inject: true }
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];
@@ -53,7 +53,7 @@ export class ProjectConfig extends SeedConfig {
 
     this.SYSTEM_BUILDER_CONFIG.packageConfigPaths = [
       ...this.SYSTEM_BUILDER_CONFIG.packageConfigPaths,
-      '/node_modules/@angular2-material/*/package.json'
+      join(this.PROJECT_ROOT, 'node_modules', '@angular2-material', '*', 'package.json')
     ];
 
     /* Add packages to SystemJS Builder */
@@ -81,18 +81,34 @@ export class ProjectConfig extends SeedConfig {
       main: 'icon.js',
       defaultExtension: 'js'
     };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/list'] = {
+      main: 'list.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/progress-bar'] = {
+      main: 'progress-bar.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/slide-toggle'] = {
+      main: 'slide-toggle.js',
+      defaultExtension: 'js'
+    };
     this.SYSTEM_BUILDER_CONFIG.packages['@angular2-material/tabs'] = {
       main: 'tabs.js',
       defaultExtension: 'js'
     };
-    // this.SYSTEM_BUILDER_CONFIG.packages['moment'] = {
-    //   main: 'min/moment-with-locales.min.js',
-    //   defaultExtension: 'js'
-    // };
-    // this.SYSTEM_BUILDER_CONFIG.packages['angular2-moment'] = {
-    //   main: 'index.js',
-    //   defaultExtension: 'js'
-    // };
+    this.SYSTEM_BUILDER_CONFIG.packages['moment'] = {
+      main: 'min/moment-with-locales.min.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['angular2-moment'] = {
+      main: 'index.js',
+      defaultExtension: 'js'
+    };
+    this.SYSTEM_BUILDER_CONFIG.packages['angular2-toaster'] = {
+      main: 'angular2-toaster.js',
+      defaultExtension: 'js'
+    };
     let PACKAGES: string[] = [];
 
     for (let pkgName in this.SYSTEM_BUILDER_CONFIG.packages) {

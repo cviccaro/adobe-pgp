@@ -6,4 +6,10 @@
     flex-direction: row;
     max-height: 24px;
   }
+  md-slide-toggle {
+    display: inline-block;
+    margin: 0 16px 0 0;
+    position: relative;
+    top: 8px;
+  }
 }

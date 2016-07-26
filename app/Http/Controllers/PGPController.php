@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SignList;
 use Illuminate\Http\Request;
 use App\PGP;
 use App\Http\Requests;
@@ -111,22 +112,40 @@ class PGPController extends Controller
                     $out_file_rows[] = ['email' => $email, 'base64' => $base64];
                 }
 
-                $created = \Excel::create($list_filename, function($excel) use ($out_file_rows) {
+                $filename_parts = explode('.', $list_filename);
+                $extension = array_pop($filename_parts);
+                $export_filename = implode('.', $filename_parts) . '-signed-' . time();
+                $export_filename_ext = $export_filename .'.' . $extension;
+
+                $created = \Excel::create($export_filename, function($excel) use ($out_file_rows) {
                      $excel->sheet('Sheet 1', function($sheet) use ($out_file_rows) {
                         $sheet->fromArray($out_file_rows);
                      });
                 })->store('csv');
 
-                \Log::info('Adding file to zip ' . storage_path('exports/' . $list_filename . '.csv'));
+                \Log::info('Adding file to zip ' . storage_path('exports/' . $export_filename_ext));
 
-                $zip->add(storage_path('exports/' . $list_filename . '.csv'));
+                $zip->add(storage_path('exports/' . $export_filename_ext));
 
-                $output['lists'][$list_filename]['url'] = url('api/exports/' . $list_filename);
+                $output['lists'][$list_filename]['url'] = url('api/exports/' . $export_filename_ext);
             }
 
             $output['url'] = url('api/exports/' . $bulk_export_filename);
 
             return response($output);
+        }
+
+        abort(400);
+    }
+
+    public function signManyQueued(Request $request) {
+        if ($request->has('lists')) {
+            $lists = $request->get('lists');
+            foreach($lists as $list) {
+                $job = (new SignList($list))->onQueue('list');
+                $this->dispatch($job);
+            }
+            return response(['success' => true]);
         }
 
         abort(400);

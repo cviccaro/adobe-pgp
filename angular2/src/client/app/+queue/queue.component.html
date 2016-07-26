@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h2 class="page-title">Bulk Queue</h2>
+    <md-list dense *ngIf="queue.length">
+        <md-list-item *ngFor="let list of queue">
+            <!--<div class="list-item-text">-->
+                <md-icon *ngIf="!list.complete && list.progress === 0" md-list-avatar>hourglass_empty</md-icon>
+                <md-icon *ngIf="!list.complete && list.progress > 0" md-list-avatar class="spin pending">update</md-icon>
+                <md-icon *ngIf="list.complete" class="success" md-list-avatar>check_circle</md-icon>
+                <h3 md-line>{{ list.filename }}</h3>
+                <p md-line>{{ list.rows }} rows</p>
+                <p md-line>{{ list.created_at | amCalendar }}</p>
+            <!--</div>-->
+            <div class="list-status">
+                <div class="list-percent">{{ list.progress / list.rows | percent }}</div>
+                <div class="list-progress-wrapper">
+                    <span class="list-progress">{{ list.progress }} completed</span>
+                    <span class="list-total">/ {{ list.rows }} total</span>
+                </div>
+            </div>
+            <span class="filler"></span>
+            <div class="list-actions" *ngIf="list.complete">
+                <button md-icon-button color="accent" title="Download {{ list.filename }} Signed" (click)="download(list)">
+                    <md-icon>file_download</md-icon>
+                </button>
+            </div>
+        </md-list-item>
+    </md-list>
+    <div class="empty" *ngIf="queue.length === 0">
+        There are no items in the queue.
+    </div>
+</div>

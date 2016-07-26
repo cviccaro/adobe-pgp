@@ -38,21 +38,10 @@ export class ListInfoComponent implements OnInit, OnChanges {
 
   @ViewChild(PanelComponent) panel: PanelComponent;
 
-  @HostBinding('class.expandable') get expandableClass() { return this.showData; }
-
   stage = 1;
-
-  get showData(): boolean { return this._showData; }
-  set showData(v: boolean) {
-    this._showData = v;
-    console.log('set _showData to ', { val: v });
-  }
-
-  private _showData: boolean = false;
 
   ngOnInit() {
     if (this.list && this.list.data && this.list.data.length) {
-      this.showData = true;
       this.list.data.sort((a,b) => {
         return a.email.localeCompare(b.email);
       });

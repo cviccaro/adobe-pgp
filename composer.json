@@ -10,7 +10,8 @@
         "pear/crypt_gpg": "^1.4",
         "maatwebsite/excel": "~2.1.0",
         "laravelcollective/bus": "^5.2",
-        "chumper/zipper": "^0.6.1"
+        "chumper/zipper": "^0.6.1",
+        "laravelCollective/bus": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

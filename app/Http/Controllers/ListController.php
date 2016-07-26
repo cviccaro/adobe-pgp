@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\UploadedList;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,5 +23,17 @@ class ListController extends Controller
         }
 
         return response(['lists' => $lists]);
+    }
+
+    public function get(Request $request, $id) {
+        $list = UploadedList::findOrFail($id);
+
+        return response($list);
+    }
+
+    public function queued(Request $request) {
+        $models = UploadedList::orderBy('created_at', 'desc')->get();
+
+        return response($models);
     }
 }

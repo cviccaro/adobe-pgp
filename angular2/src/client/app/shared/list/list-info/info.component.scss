@@ -36,12 +36,19 @@
       margin-left: 24px;
     }
   }
+  jpa-panel2-bar-title,
   jpa-panel2-bar-subtitle {
     height: 36px;
     //button {
     //  position: relative;
     //  top: -5px;
     //}
+  }
+  jpa-panel2-bar {
+    jpa-panel2-bar-subtitle {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   jpa-panel2-content {
     display: block;
