@@ -9,5 +9,5 @@
     </button>
 </div>
 <jpa2-panel-group>
-    <apgp-list-info *ngFor="let list of lists; let index = index;" [list]="list" [index]="index"></apgp-list-info>
+    <apgp-list-info *ngFor="let list of lists; let index = index;" [list]="list" [index]="index" [hasData]="list.hasData"></apgp-list-info>
 </jpa2-panel-group>

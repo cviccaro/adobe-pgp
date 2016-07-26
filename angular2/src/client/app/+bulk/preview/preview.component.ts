@@ -52,7 +52,7 @@ export class BulkPreviewComponent {
           }
 
           list.signed = { data: signedData, url: url };
-
+          list.hasData = true;
           //console.log(list);
         }
         this.bulkDownloadUrl = res.url;

@@ -11,6 +11,7 @@ export * from './toolbar/index';
 export * from './config/env.config';
 export * from './pgp/index';
 export * from './cache/index';
+export * from './chip/index';
 export * from './list/index';
 export * from './copy-container/index';
 export * from './file-dropzone/index';

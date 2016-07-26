@@ -1,7 +1,7 @@
 :host {
   display: flex;
   flex-direction: column;
-  padding: 24px 0;
+  //padding: 24px 0;
   .cards {
     display: flex;
     flex-direction: row;
@@ -67,6 +67,17 @@
           }
         }
       }
+    }
+  }
+
+  ul {
+    -webkit-column-count: 6;
+    -moz-column-count: 6;
+    column-count: 6;
+    li {
+      font-size: 14px;
+      line-height:24px;
+      list-style: disc inside none;
     }
   }
 }

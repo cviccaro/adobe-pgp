@@ -1,11 +1,12 @@
 import {
-    Component,
-    ContentChildren,
-    Output,
-    EventEmitter,
-    QueryList,
-    AfterContentInit,
-    OnDestroy
+  Component,
+  ContentChildren,
+  Output,
+  EventEmitter,
+  QueryList,
+  AfterContentInit,
+  OnDestroy,
+  Input
 } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -22,6 +23,8 @@ import {MdButton} from "@angular2-material/button/button";
 })
 export class PanelBarComponent implements AfterContentInit, OnDestroy {
     public _subscriptions: Subscription[] = [];
+
+    @Input() expandable = true;
 
     @Output() onToggle = new EventEmitter();
 
@@ -50,7 +53,9 @@ export class PanelBarComponent implements AfterContentInit, OnDestroy {
     toggle(evt: Event): void {
         evt.preventDefault();
         evt.stopPropagation();
-        this.onToggle.emit(evt);
+        if (this.expandable) {
+            this.onToggle.emit(evt);
+        }
     }
 
     /**
