@@ -30,6 +30,9 @@
                 </div>
             </div>
             <span class="filler"></span>
+            <div class="list-time-left" *ngIf="!list.complete && list.time_left">
+                {{ list.time_left }} left &hellip;
+            </div>
             <div class="list-actions" *ngIf="list.complete">
                 <button md-icon-button color="accent" title="Download {{ list.filename }} Signed" (click)="download(list)">
                     <md-icon>file_download</md-icon>

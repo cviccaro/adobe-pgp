@@ -18,6 +18,7 @@ class CreateListTable extends Migration
             $table->integer('rows')-> unsigned();
             $table->boolean('complete')->default(false);
             $table->string('download_url')->nullable();
+            $table->string('time_left')->nullable();
             $table->timestamps();
         });
     }

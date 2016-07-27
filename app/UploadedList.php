@@ -8,7 +8,7 @@ class UploadedList extends Model
 {
     protected $table = 'list';
 
-    protected $fillable = [ 'filename', 'rows', 'complete' ];
+    protected $fillable = [ 'filename', 'rows', 'complete', 'time_left' ];
 
     protected $appends = [ 'progress' ];
 
