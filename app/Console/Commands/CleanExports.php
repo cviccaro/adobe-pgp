@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\UploadedList;
 use Illuminate\Console\Command;
 
 class CleanExports extends Command
@@ -37,19 +38,28 @@ class CleanExports extends Command
      */
     public function handle()
     {
-        $files = \File::files(storage_path('exports'));
+        $this->comment('CleanExports# --- Starting task.');
 
-        $yesterday = \Carbon\Carbon::now()->subDay(1);
+        $lastMonth = \Carbon\Carbon::now()->subMonth();
 
-        $deleted = $processed = 0;
-        foreach($files as $filename) {
-            $lastModified = \File::lastModified($filename);
-            $processed++;
-            if ($yesterday->diffInHours(\Carbon\Carbon::createFromTimestamp($lastModified)) <= 0) {
-                \File::delete($filename);
-                $deleted++;
-            }
+        $models = UploadedList::where('updated_at', '<=', $lastMonth)->get();
+        if ( !$models->isEmpty() ) {
+            $this->comment('CleanExports# --- Found ' . $models->count() . ' UploadedLists to delete.');
+
+            $deleted = 0;
+            $models->each(function(UploadedList $list) use ($deleted) {
+                if ($list->delete()) {
+                    $filepath = str_replace('api/', '', $list->download_url);
+                    if (\File::exists($filepath)) \File::delete($filepath);
+
+                    $deleted++;
+
+                    $this->comment('CleanExport# --- Deleted UploadedList ' . $list->filename . ' and its export at ' . storage_path($filepath));
+                }
+            });
+            $this->comment('CleanExports# --- Deleted ' . $deleted . ' UploadedLists and their files.');
+        } else {
+            $this->comment('CleanExport# --- Nothing to delete.');
         }
-        $this->comment('Iterated over ' . $processed . ' exports.  Cleaned ' . $deleted . '.');
     }
 }

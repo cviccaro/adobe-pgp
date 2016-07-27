@@ -57,9 +57,9 @@ export class HomeComponent {
    * Decrypt a value
    * @param encrypted string
    */
-  decrypt(encrypted: string) {
-    this.pgp.decrypt(encrypted).subscribe(res => {
-      console.log('Decrypted ' + encrypted + ' to ' + res);
-    });
-  }
+  // decrypt(encrypted: string) {
+  //   this.pgp.decrypt(encrypted).subscribe(res => {
+  //     console.log('Decrypted ' + encrypted + ' to ' + res);
+  //   });
+  // }
 }

@@ -1,4 +1,4 @@
-import {Component, ViewChildren, QueryList} from '@angular/core';
+import {Component, ViewChildren, QueryList, OnDestroy} from '@angular/core';
 import {CacheService} from "../../shared/cache/cache.service";
 import {ListInfoComponent} from "../../shared/list/list-info/info.component";
 import {ManagedFile} from "../../shared/file-dropzone/file";
@@ -10,6 +10,7 @@ import {PanelComponent} from "../../shared/panel2/panel2.component";
 import {MdSlideToggle} from "@angular2-material/slide-toggle/slide-toggle";
 import {Router} from "@angular/router";
 import {ToasterService} from "angular2-toaster/angular2-toaster";
+import {Subscription} from "rxjs/Rx";
 
 @Component({
   moduleId: module.id,
@@ -18,14 +19,14 @@ import {ToasterService} from "angular2-toaster/angular2-toaster";
   styleUrls: [ './preview.component.css' ],
   directives: [ ListInfoComponent, MdButton, MdIcon, MdSlideToggle, PanelGroupComponent, PanelComponent ]
 })
-export class BulkPreviewComponent {
-  lists: any[] = [];
-  files: ManagedFile[] = [];
-  submitted = false;
+export class BulkPreviewComponent implements OnDestroy {
   bulkDownloadUrl: string;
-
-  useQueue: boolean = false;
+  files: ManagedFile[] = [];
+  lists: any[] = [];
   lockQueue: boolean = false;
+  submitted = false;
+  submitSub: Subscription;
+  useQueue: boolean = false;
   working: boolean = false;
 
   @ViewChildren(ListInfoComponent) listCmps: QueryList<ListInfoComponent>;
@@ -40,14 +41,10 @@ export class BulkPreviewComponent {
       total = total + list.data.length;
     });
 
-    console.log('Total Rows: ', total);
-
     if (total > 500) {
       this.useQueue = true;
       this.lockQueue = true;
     }
-
-    console.log('Preview constructed ', this);
   }
 
   submit() {
@@ -56,24 +53,19 @@ export class BulkPreviewComponent {
     let count = this.lists.length;
     this.working = true;
     if (this.useQueue) {
-      this.pgp.signManyQueued(this.lists)
+      this.submitSub = this.pgp.signManyQueued(this.lists)
         .subscribe(res => {
-          console.log('SignManyQueued response: ', res);
           this.working = false;
-          this.toaster.pop('success', 'Success!', count + ' lists have been queued.  Routing you to the Queue in 5 seconds...');
-          setTimeout(() => { this.router.navigate(['/queue']); }, 5000);
-        })
+          this.toaster.pop('success', 'Success!', count + ' lists have been queued.  Routing you to the Queue in 3 seconds...');
+          setTimeout(() => { this.router.navigate(['/queue']); }, 3000);
+        });
     } else {
-      this.pgp.signMany(this.lists)
+      this.submitSub = this.pgp.signMany(this.lists)
         .subscribe(res => {
-          // console.log('Response from signMany: ', res);
-
           for (let file in res.lists) {
             let list = this.lists.find(list => list.file === file);
             let signed = res.lists[file].data;
             let url = res.lists[file].url;
-
-            //console.log({signed: signed, url: url});
 
             let signedData = [];
 
@@ -83,18 +75,25 @@ export class BulkPreviewComponent {
 
             list.signed = { data: signedData, url: url };
             list.hasData = true;
-            //console.log(list);
           }
 
           this.bulkDownloadUrl = res.url;
           this.submitted = true;
           this.working = false;
-          this.toaster.pop('success', 'Success!', count + ' lists have been signed.  Use the buttons to download individually, or download all lists bundled as a ZIP file.');
+
+          let msg = `${count} lists have been signed.  Use the buttons to download 
+            individually, or download all lists bundled as a ZIP file.`;
+
+          this.toaster.pop('success', 'Success!', msg);
         });
     }
   }
 
   downloadAll() {
     window.open(this.bulkDownloadUrl, '_blank');
+  }
+
+  ngOnDestroy() {
+    if (this.submitSub) this.submitSub.unsubscribe();
   }
 }

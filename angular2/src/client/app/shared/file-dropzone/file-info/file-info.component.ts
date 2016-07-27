@@ -1,4 +1,4 @@
-import {Component, Input, AfterViewInit } from "@angular/core";
+import {Component, Input } from "@angular/core";
 import {ManagedFile} from "../file";
 import {FileCardComponent} from "../file-card/file-card.component";
 
@@ -9,11 +9,7 @@ import {FileCardComponent} from "../file-card/file-card.component";
   styleUrls: [ './file-info.component.css' ],
   directives: [ FileCardComponent ]
 })
-export class FileInfoComponent implements AfterViewInit {
+export class FileInfoComponent {
   @Input() file : ManagedFile;
   @Input() index: number = 0;
-
-  ngAfterViewInit() {
-    console.log('FileInfoComponent View Initialized. ', this);
-  }
 }

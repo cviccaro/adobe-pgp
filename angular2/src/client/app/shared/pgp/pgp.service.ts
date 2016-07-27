@@ -12,7 +12,7 @@ export class PgpService {
     return this.http.post('/api/decrypt', input)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -21,7 +21,7 @@ export class PgpService {
     return this.http.post('/api/encrypt', input)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -30,7 +30,7 @@ export class PgpService {
     return this.http.post('/api/encrypt-many', {lists: lists})
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -39,7 +39,7 @@ export class PgpService {
     return this.http.post('/api/sign', input)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -48,7 +48,7 @@ export class PgpService {
     return this.http.post('/api/sign-many', {lists: lists})
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -57,7 +57,7 @@ export class PgpService {
     return this.http.post('/api/sign-many/queue', {lists: lists})
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 }

@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, OnDestroy} from '@angular/core';
 import {MdCard} from "@angular2-material/card/card";
 import {FileDropzoneComponent} from "../shared/file-dropzone/file-dropzone";
 import {MD_GRID_LIST_DIRECTIVES} from "@angular2-material/grid-list/grid-list";
@@ -9,6 +9,7 @@ import {MD_ICON_DIRECTIVES} from "@angular2-material/icon/icon";
 import {ListService} from "../shared/list/list.service";
 import {CacheService} from "../shared/cache/cache.service";
 import {Router} from "@angular/router";
+import {Subscription} from "rxjs/Rx";
 
 /**
  * This class represents the lazy loaded BulkComponent.
@@ -27,8 +28,9 @@ import {Router} from "@angular/router";
     FileCardComponent,
   ]
 })
-export class BulkComponent {
+export class BulkComponent implements OnDestroy {
   @ViewChild(FileDropzoneComponent) dropzone : FileDropzoneComponent;
+  listSub: Subscription;
 
   constructor(
     public pgp: PgpService,
@@ -39,12 +41,16 @@ export class BulkComponent {
 
   preview() {
     //console.log('Preview! ', this.dropzone.files);
-    this.list.uploadAndParse(this.dropzone.files)
+    this.listSub = this.list.uploadAndParse(this.dropzone.files)
       .subscribe((res: any) => {
         //console.log('Response: ', res);
         this.cache.store('lists', res.lists);
         this.cache.store('files', this.dropzone.files);
         this.router.navigate(['/bulk/preview']);
       });
+  }
+
+  ngOnDestroy() {
+    if (this.listSub) this.listSub.unsubscribe();
   }
 }

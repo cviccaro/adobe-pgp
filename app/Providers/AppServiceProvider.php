@@ -21,14 +21,13 @@ class AppServiceProvider extends ServiceProvider
                 $command = unserialize($event->data['data']['command']);
                 if (isset($command->list_id)) {
                     $list = UploadedList::find($command->list_id);
-                    $progress = $list->progress;
 
-                    \Log::info('Completed ' . $progress . ' of ' . $list->rows . ' on list ' . $list->filename);
+                    //\Log::info('SignStringJob# --- Completed item ' . $list->progress . ' of ' . $list->rows . ' on list ' . $list->filename);
 
                     if ($list->progress === $list->rows) {
                         $job = (new ExportSignedList($list))->onQueue('list');
                         dispatch($job);
-                        \Log::info($list->filename . ' completed!  Dispatching ExportSignedList job.');
+                        \Log::info('SignStringJob# --- Completed list ' . $list->filename . '!  Dispatching ExportSignedList job.');
                     }
                 }
             }

@@ -1,4 +1,23 @@
 :host {
+  .section-subtitle {
+    color: #3A3A3A;
+  }
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    .section-titles {
+      display: flex;
+      flex-direction: column;
+    }
+    .section-pagination {
+
+    }
+  }
+  jpa-pager {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   md-list,md-list[dense] {
     md-list-item {
       h3[md-line] {
@@ -9,7 +28,10 @@
         color: #999;
       }
       .md-list-text {
-        width: auto;
+        width: 15%;
+        [md-line] {
+          overflow: visible;
+        }
       }
       .list-status {
         display: flex;
@@ -21,6 +43,7 @@
           font-weight: 300;
           align-self: center;
           margin-right: 16px;
+          min-width: 135px;
         }
         .list-progress-wrapper {
           display: flex;
@@ -46,6 +69,7 @@
       color: #009688;
     }
     .pending {
+      color: #9c27b0;
       width: 24px;
       height: 24px;
       margin-right: 16px;

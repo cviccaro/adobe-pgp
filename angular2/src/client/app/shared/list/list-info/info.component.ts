@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild, OnChanges, SimpleChanges, HostBinding, OnInit} from '@angular/core';
+import {Component, Input, ViewChild, OnChanges, SimpleChanges, OnInit} from '@angular/core';
 import {FileCardComponent} from "../../file-dropzone/file-card/file-card.component";
 import {MdCard} from "@angular2-material/card/card";
 import {CopyContainerComponent} from "../../copy-container/copy-container.component";
@@ -8,7 +8,6 @@ import {MdIcon} from "@angular2-material/icon/icon";
 import {MdButton} from "@angular2-material/button/button";
 import {MD_TABS_DIRECTIVES} from "@angular2-material/tabs/tabs";
 import {NgSwitchDefault, NgSwitchCase, NgSwitch} from "@angular/common";
-import {ChipComponent} from "../../chip/chip.component";
 import {MD_GRID_LIST_DIRECTIVES} from "@angular2-material/grid-list/grid-list";
 
 @Component({
@@ -27,7 +26,6 @@ import {MD_GRID_LIST_DIRECTIVES} from "@angular2-material/grid-list/grid-list";
     NgSwitch,
     NgSwitchCase,
     NgSwitchDefault,
-    ChipComponent,
     MD_GRID_LIST_DIRECTIVES
   ]
 })

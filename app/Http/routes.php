@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('test', function() {
-    dd(App\UploadedList::find(1)->signedStrings->map(function($model) {
-        return ['text' => $model->text, 'base64' => $model->base64];
-    }));
-});
-
-
 Route::post('/api/decrypt', 'PGPController@decrypt');
 Route::post('/api/encrypt', 'PGPController@encrypt');
 Route::post('/api/sign', 'PGPController@sign');

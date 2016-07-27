@@ -16,7 +16,7 @@ export class CopyContainerComponent {
     try {
       document.execCommand('copy');
     } catch (err) {
-      console.log('Oops, unable to copy', err);
+      //console.log('Oops, unable to copy', err);
     }
   }
 }

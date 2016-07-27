@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
+import {Http, RequestOptions, URLSearchParams} from "@angular/http";
 import {ManagedFile} from "../file-dropzone/file";
 import 'rxjs/add/operator/map';
 import {XhrService} from "../xhr/xhr.service";
@@ -20,7 +20,7 @@ export class ListService {
     return this.http.post('/api/upload-list', form)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
@@ -29,16 +29,24 @@ export class ListService {
     return this.http.get(`/api/list/${id}`)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 
-  queued() {
+  queued(search?: any) {
     this.xhr.started();
-    return this.http.get('/api/list-queue')
+    let options = new RequestOptions();
+    if (search) {
+      let s = new URLSearchParams();
+      for (let key in search) {
+        s.append(key, search[key]);
+      }
+      options.search = s;
+    }
+    return this.http.get('/api/list-queue', options)
       .map(res => {
         this.xhr.finished();
-        return res.json()
+        return res.json();
       });
   }
 }

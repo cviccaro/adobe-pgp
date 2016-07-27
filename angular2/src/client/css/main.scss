@@ -41,14 +41,24 @@ h5.light {
   color: rgba(0,0,0,.54);
 }
 
-.page-title {
+.page-title,
+.section-title {
   font-size: 20px;
   font-weight: normal;
 }
 
-.page-subtitle {
+.page-subtitle,
+.section-subtitle {
   font-size: 14px;
   font-weight: normal;
+}
+
+.section-pagination {
+  display: flex;
+  flex-direction: row;
+  .pagination-option {
+    align-self: center;
+  }
 }
 
 .app-progress {
