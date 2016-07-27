@@ -61,7 +61,7 @@ class AppServiceProvider extends ServiceProvider
 //                        $estimate
 //                    ));
 
-                    if ($list->progress === $list->rows) {
+                    if ($list->progress == $list->rows) {
                         $job = (new ExportSignedList($list))->onQueue('list');
                         dispatch($job);
                         \Log::info('SignStringJob# --- Completed list ' . $list->filename . '!  Dispatching ExportSignedList job.');

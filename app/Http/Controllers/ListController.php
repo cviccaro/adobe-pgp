@@ -48,7 +48,12 @@ class ListController extends Controller
                 default:
                     return $model->{$order_by};
             }
-        }, SORT_REGULAR, $descending);
+        }, SORT_REGULAR, $descending)->map(function($model) {
+            $model->complete = intval($model->complete);
+            $model->rows = intval($model->rows);
+            $model->progress = min($model->rows, intval($model->progress));
+            return $model;
+        });
 
         $count = $models->count();
 
@@ -64,7 +69,9 @@ class ListController extends Controller
             $json['from'] = 1;
         }
 
-        $json['data'] = array_values($json['data']);
+        $json['data'] = array_map(function($datum) {
+            $datum['progress'] = min($datum['progress'], $datum['rows']); return $datum;
+        }, array_values($json['data']));
 
         return response($json);
     }
