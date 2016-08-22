@@ -70,7 +70,11 @@ class ListController extends Controller
         }
 
         $json['data'] = array_map(function($datum) {
-            $datum['progress'] = min($datum['progress'], $datum['rows']); return $datum;
+            $datum['progress'] = min($datum['progress'], $datum['rows']);
+
+            unset($datum['signed_strings']);
+            
+            return $datum;
         }, array_values($json['data']));
 
         return response($json);
