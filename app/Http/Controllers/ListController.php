@@ -37,9 +37,11 @@ class ListController extends Controller
         $order_by = $request->input('order_by', 'created_at');
         $descending = $request->input('descending', 'true') === 'true';
 
-        $models = UploadedList::all();
-
-        $models = $models->sortBy(function ($model) use ($order_by) {
+        $models = collect(\DB::table('list')->get());
+        $models = $models->map(function ($model) {
+            $model->progress = \DB::table('signed_string')->where('list_id', $model->id)->count();
+            return $model;
+        })->sortBy(function ($model) use ($order_by) {
             switch ($order_by) {
                 case 'updated_at':
                 case 'created_at':
@@ -69,13 +71,7 @@ class ListController extends Controller
             $json['from'] = 1;
         }
 
-        $json['data'] = array_map(function($datum) {
-            $datum['progress'] = min($datum['progress'], $datum['rows']);
-
-            unset($datum['signed_strings']);
-            
-            return $datum;
-        }, array_values($json['data']));
+        $json['data'] = array_values($json['data']);
 
         return response($json);
     }
