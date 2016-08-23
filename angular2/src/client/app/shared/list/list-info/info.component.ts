@@ -41,7 +41,9 @@ export class ListInfoComponent implements OnInit, OnChanges {
   ngOnInit() {
     if (this.list && this.list.data && this.list.data.length) {
       this.list.data.sort((a,b) => {
-        return a.email.localeCompare(b.email);
+        let key = 'email';
+        if (Object.keys(a).length === 1) key = Object.keys(a)[0];
+        return a[key].localeCompare(b[key]);
       });
     }
   }
