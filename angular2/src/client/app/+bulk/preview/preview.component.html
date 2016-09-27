@@ -2,7 +2,7 @@
 <h4 class="light page-subtitle">{{ lists.length }} Lists</h4>
 <div class="form-actions">
     <md-slide-toggle color="accent" [(ngModel)]="useQueue" [disabled]="lockQueue">Queue</md-slide-toggle>
-    <button md-raised-button color="primary" class="submit" (click)="submit()" [ngSwitch]="working" [disabled]="working">
+    <button md-raised-button color="primary" class="submit" (click)="submit()" [ngSwitch]="working" [disabled]="working || !ready">
         <template [ngSwitchCase]="true">
             <md-icon class="spin">update</md-icon>&nbsp;{{ useQueue ? 'Queueing...' : 'Signing...' }}
         </template>

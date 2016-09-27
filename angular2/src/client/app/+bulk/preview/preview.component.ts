@@ -27,6 +27,7 @@ export class BulkPreviewComponent implements OnDestroy {
   submitted = false;
   submitSub: Subscription;
   useQueue: boolean = false;
+  ready: boolean = false;
   working: boolean = false;
 
   @ViewChildren(ListInfoComponent) listCmps: QueryList<ListInfoComponent>;
@@ -45,6 +46,8 @@ export class BulkPreviewComponent implements OnDestroy {
       this.useQueue = true;
       this.lockQueue = true;
     }
+
+    this.ready = true;
   }
 
   submit() {
@@ -56,6 +59,8 @@ export class BulkPreviewComponent implements OnDestroy {
       this.submitSub = this.pgp.signManyQueued(this.lists)
         .subscribe(res => {
           this.working = false;
+          this.lists = [];
+          this.ready = false;
           this.toaster.pop('success', 'Success!', count + ' lists have been queued.  Routing you to the Queue in 3 seconds...');
           setTimeout(() => { this.router.navigate(['/queue']); }, 3000);
         });

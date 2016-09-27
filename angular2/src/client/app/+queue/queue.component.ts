@@ -93,6 +93,7 @@ export class QueueComponent implements OnInit, OnDestroy {
   }
 
   startPolling() {
+    this.stopPolling();
     this.fetchTimer = setInterval(() => { this.fetch(); }, this.autorefreshInterval * 1000);
   }
 
@@ -114,7 +115,6 @@ export class QueueComponent implements OnInit, OnDestroy {
 
   intervalChanged() {
     setTimeout(() => {
-      console.log('interval changed to ', this.autorefreshInterval);
       if (this.hasLocalStorage) {
         localStorage.setItem('jp_pgp_autorefresh_interval', this.autorefreshInterval.toString());
       }

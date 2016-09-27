@@ -40,7 +40,7 @@ export class PagerComponent implements OnInit, OnChanges {
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes.hasOwnProperty('pagerData')) {
-            console.log('pagerData changed ', this.pagerData);
+            //console.log('pagerData changed ', this.pagerData);
             this.pages = new Array(this.pagerData.last_page);
         }
     }
