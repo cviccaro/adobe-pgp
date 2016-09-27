@@ -17,7 +17,10 @@
     cursor: pointer;
 
     transition: all 250ms linear;
-
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
     .required {
       margin-left: 4px;
     }

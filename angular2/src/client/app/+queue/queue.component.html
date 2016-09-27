@@ -7,9 +7,25 @@
         <span class="filler"></span>
         <div class="section-pagination">
             <div class="pagination-option">
+                <md-slide-toggle [(ngModel)]="autorefresh" (change)="autorefreshChanged()">Autorefresh</md-slide-toggle>
+            </div>
+            <div class="pagination-option" [hidden]="!autorefresh">
+                <label for="length">Interval</label>
+                <select id="length" [(ngModel)]="autorefreshInterval" name="autorefreshInterval" (change)="intervalChanged()">
+                    <option *ngFor="let i of [5, 10, 15, 30, 45, 60]" [value]="i">{{ i }} seconds</option>
+                </select>
+            </div>
+            <div class="pagination-option">
                 <label for="length">Per Page</label>
                 <select id="length" [(ngModel)]="page.length" name="length" (change)="perPageChanged()">
                     <option *ngFor="let i of [5,10,15,25,50,100]" [value]="i">{{ i }}</option>
+                </select>
+            </div>
+            <div class="pagination-option">
+                <label for="length">Sort</label>
+                <select id="length" [(ngModel)]="sortDescending" name="length" (change)="sortChanged()">
+                    <option value="1">Newest First</option>
+                    <option value="0">Oldest First</option>
                 </select>
             </div>
         </div>

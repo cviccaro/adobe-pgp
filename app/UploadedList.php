@@ -19,4 +19,8 @@ class UploadedList extends Model
     public function getProgressAttribute() {
         return $this->signedStrings->count();
     }
+
+    public function scopeIncomplete($query) {
+    	return $query->where('complete', 0);
+    }
 }

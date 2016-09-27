@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\CleanExports::class,
+        Commands\AuditExports::class
     ];
 
     /**
@@ -26,5 +27,7 @@ class Kernel extends ConsoleKernel
     {
          $schedule->command('clean:exports')
                   ->daily();
+         $schedule->command('audit:exports')
+            ->everyFiveMinutes();
     }
 }
