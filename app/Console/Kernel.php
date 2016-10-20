@@ -29,9 +29,5 @@ class Kernel extends ConsoleKernel
                   ->daily();
          $schedule->command('audit:exports')
             ->everyFiveMinutes();
-
-        $schedule->call(function() {
-            \Log::info('Running scheduler at ' . date('F j, Y g:m A'));
-        })->everyMinute();
     }
 }
