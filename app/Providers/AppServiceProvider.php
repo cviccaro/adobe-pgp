@@ -33,22 +33,24 @@ class AppServiceProvider extends ServiceProvider
 
                     if (\File::exists(storage_path('signed-string-job-last-completed.json'))) {
                         $json = json_decode(\File::get(storage_path('signed-string-job-last-completed.json')));
-                        $diff = Carbon::now()->diffInSeconds(Carbon::createFromTimestamp($json->last_time));
-                        if ($diff) {
-                            $seconds = ($list->rows - $list->progress) * $diff;
-                            $minutes = 0;
-                            $hours = 0;
-                            if ($seconds % 60) {
-                                $minutes = floor($seconds / 60);
-                                $seconds = $seconds - ($minutes * 60);
-                                if ($minutes % 60) {
-                                    $hours = floor($minutes / 60);
-                                    $minutes = $minutes - ($hours * 60);
+                        if (is_object($json)) {
+                            $diff = Carbon::now()->diffInSeconds(Carbon::createFromTimestamp($json->last_time));
+                            if ($diff) {
+                                $seconds = ($list->rows - $list->progress) * $diff;
+                                $minutes = 0;
+                                $hours = 0;
+                                if ($seconds % 60) {
+                                    $minutes = floor($seconds / 60);
+                                    $seconds = $seconds - ($minutes * 60);
+                                    if ($minutes % 60) {
+                                        $hours = floor($minutes / 60);
+                                        $minutes = $minutes - ($hours * 60);
+                                    }
                                 }
+                                $estimate = sprintf('%d hours %d minutes %d seconds', $hours, $minutes, $seconds);
+                                $list->time_left = $estimate;
+                                $list->save();
                             }
-                            $estimate = sprintf('%d hours %d minutes %d seconds', $hours, $minutes, $seconds);
-                            $list->time_left = $estimate;
-                            $list->save();
                         }
                     }
                     \File::put(storage_path('signed-string-job-last-completed.json'), json_encode(['last_time' => time()]));
