@@ -1,0 +1,18 @@
+:host /deep/ {
+  display: block;
+  padding: 0 16px;
+  md-input {
+    flex: 1;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+  md-card {
+    max-width: 600px;
+    margin: 24px 0;
+    &.result {
+      max-width: 850px;
+    }
+  }
+}

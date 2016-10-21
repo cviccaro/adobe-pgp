@@ -1,0 +1,35 @@
+:host /deep/ {
+  position: relative;
+  display: block;
+  .copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    md-icon {
+      vertical-align: bottom;
+    }
+  }
+  pre {
+    padding-right: 96px;
+  }
+  textarea {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    height: 1px;
+    padding: 0;
+    line-height: 0;
+    border: 1px solid transparent;
+    outline: none;
+    outline-width: 0px;
+    outline-color: transparent;
+  }
+}
+
+:host {
+  &.contain /deep/ {
+    pre {
+      white-space: normal;
+    }
+  }
+}

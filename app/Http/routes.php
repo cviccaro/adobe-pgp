@@ -24,5 +24,5 @@ Route::get('/api/list-queue', 'ListController@queued');
 Route::post('/api/upload-list', 'ListController@uploadAndParse');
 
 Route::any('/{page?}/{subpage?}/{id?}', function () {
-    return view('angular');
+    return view(env('ANGULAR_VIEW', 'angular'));
 });

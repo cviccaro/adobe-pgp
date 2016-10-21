@@ -1,0 +1,83 @@
+:host /deep/ {
+  .section-subtitle {
+    color: #3A3A3A;
+  }
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    .section-titles {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  jpa-pager {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  md-list,md-list[dense] {
+    md-list-item {
+      h3[md-line] {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      p[md-line] {
+        color: #999;
+      }
+      .md-list-text {
+        width: 15%;
+        [md-line] {
+          overflow: visible;
+        }
+      }
+      .list-status {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 64px;
+        .list-percent {
+          font-size: 40px;
+          font-weight: 300;
+          align-self: center;
+          margin-right: 16px;
+          min-width: 135px;
+        }
+        .list-progress-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .list-progress,
+          .list-total {
+            width: 100%;
+            text-align: left;
+          }
+          .list-progress {
+            font-size: 18px;
+          }
+          .list-total {
+            color: #999;
+            font-size: 13px;
+          }
+        }
+        .list-time-left {
+          font-size: 16px;
+          margin-left: 24px;
+          align-self: center;
+        }
+      }
+    }
+
+    .success {
+      color: #009688;
+    }
+    .pending {
+      color: #9c27b0;
+      width: 24px;
+      height: 24px;
+      margin-right: 16px;
+    }
+  }
+  .pagination-option {
+    margin-left: 24px;
+  }
+}

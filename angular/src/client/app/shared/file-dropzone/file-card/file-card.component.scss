@@ -1,0 +1,56 @@
+:host /deep/ {
+    display: block;
+    z-index: 10;
+    .md-card-header-text {
+        order: 2;
+        md-card-subtitle {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            span {
+                float: left;
+            }
+        }
+    }
+
+    .shade {
+        transition: all 250ms linear;
+        display: block;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .new {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: #106cc8;
+    }
+    .remove {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        md-icon {
+            color: #fff;
+        }
+        cursor: pointer;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+:host {
+    &.actions-hovering /deep/ {
+        .shade {
+            background: rgba(0,0,0,0.54);
+        }
+    }
+
+    &.dnd-drag-start /deep/ {
+        border: 2px dashed rgba(0,0,0,0.54);
+    }
+}
