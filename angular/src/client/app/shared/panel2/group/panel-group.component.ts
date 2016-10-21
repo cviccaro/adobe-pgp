@@ -21,7 +21,7 @@ export class PanelGroupComponent implements AfterContentInit, OnDestroy {
 
     @HostBinding('class.child-expanded') get expandedClass() { return this.childExpanded; }
 
-    @ContentChildren(PanelComponent) private _panelChildren : QueryList<PanelComponent>;
+    @ContentChildren(PanelComponent) public _panelChildren : QueryList<PanelComponent>;
 
     ngAfterContentInit() {
         this._panelChildren.forEach(panel => {

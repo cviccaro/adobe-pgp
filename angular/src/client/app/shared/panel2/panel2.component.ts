@@ -28,8 +28,8 @@ export class PanelComponent implements AfterContentInit, PanelToggle, OnDestroy 
 
     @Output() onToggle = new EventEmitter<boolean>();
 
-    @HostBinding('class.expanded') private get expandedClass() { return this.expanded; }
-    @HostBinding('class.jpa-panel') private get jpapanelClass() { return true; }
+    @HostBinding('class.expanded') public get expandedClass() { return this.expanded; }
+    @HostBinding('class.jpa-panel') public get jpapanelClass() { return true; }
 
     private _expanded: boolean = false;
     private _toggleSub: Subscription;
