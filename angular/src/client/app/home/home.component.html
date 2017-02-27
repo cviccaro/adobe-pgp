@@ -5,7 +5,9 @@
         </md-card-title>
     </md-card-header>
     <form (submit)="sign()" #singleForm="ngForm">
-      <md-input [(ngModel)]="input" name="input" placeholder="Email Address" required type="email"></md-input>
+      <md-input-container>
+        <input mdInput [(ngModel)]="input" name="input" placeholder="Email Address" required type="email" />
+      </md-input-container>
       <button md-button type="submit" [disabled]="singleForm.invalid">Sign</button>
     </form>
 </md-card>

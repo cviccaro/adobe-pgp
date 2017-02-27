@@ -1,7 +1,7 @@
 :host /deep/ {
   display: block;
   padding: 0 16px;
-  md-input {
+  md-input-container {
     flex: 1;
   }
   form {
@@ -11,8 +11,14 @@
   md-card {
     max-width: 600px;
     margin: 24px 0;
+    .mat-card-header-text {
+      margin-left: 0;
+    }
     &.result {
       max-width: 850px;
     }
+  }
+  .mat-placeholder-required {
+    color: $pink;
   }
 }

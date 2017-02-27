@@ -2,7 +2,7 @@
     <div class="section-header">
         <div class="section-titles">
             <h2 class="section-title">Bulk Queue</h2>
-            <h4 class="section-subtitle" *ngIf="queue.length">Showing {{ page.from }} - {{ page.to }} of {{ page.total }}</h4>
+            <h4 class="section-subtitle" *ngIf="queue?.length">Showing {{ page.from }} - {{ page.to }} of {{ page.total }}</h4>
         </div>
         <span class="filler"></span>
         <div class="section-pagination">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <md-list dense *ngIf="queue.length">
+    <md-list dense *ngIf="queue?.length">
         <md-list-item *ngFor="let list of queue">
             <md-icon *ngIf="!list.complete && list.progress === 0" md-list-avatar>hourglass_empty</md-icon>
             <md-icon *ngIf="!list.complete && list.progress > 0" md-list-avatar class="spin pending">update</md-icon>

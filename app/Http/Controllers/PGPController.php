@@ -152,7 +152,10 @@ class PGPController extends Controller
     }
 
     public function getExport(Request $request, $filename) {
-        $path = storage_path('exports/'. $filename . '.csv');
+        if (substr($filename, strlen($filename) - 4) !== 'csv') { 
+            $filename .= '.csv';
+        }
+        $path = storage_path('exports/'. $filename);
         if ( !file_exists($path) ) $path = storage_path('exports/'. $filename);
         return response()->download($path);
     }

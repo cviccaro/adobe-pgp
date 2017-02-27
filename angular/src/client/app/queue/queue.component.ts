@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ListService } from '../shared/list/list.service';
-import { Subscription } from 'rxjs/Rx';
+
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   moduleId: module.id,
@@ -58,6 +59,14 @@ export class QueueComponent implements OnInit, OnDestroy {
 
   fetch() {
     this.stopPolling();
+    console.log('Start fetching!');
+
+    console.log('Fetch options: ', {
+      current_page: this.page.current_page,
+      length: this.page.length,
+      order_by: this.page.order_by,
+      descending: this.page.descending
+    });
     this.listSub = this.listService.queued({
       current_page: this.page.current_page,
       length: this.page.length,
@@ -65,6 +74,7 @@ export class QueueComponent implements OnInit, OnDestroy {
       descending: this.page.descending
     })
     .subscribe((res: any) => {
+      console.log('res on fetch: ', res);
       let page = Object.assign({}, this.page);
 
       page.from = res.from;
@@ -89,7 +99,10 @@ export class QueueComponent implements OnInit, OnDestroy {
   }
 
   stopPolling() {
-    clearInterval(this.fetchTimer);
+    if (this.fetchTimer) {
+      // clearInterval(this.fetchTimer);
+      this.fetchTimer.cancelFn(this.fetchTimer);
+    }
   }
 
   autorefreshChanged() {

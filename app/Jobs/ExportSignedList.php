@@ -33,7 +33,7 @@ class ExportSignedList extends Job implements ShouldQueue
     {
         $filename_parts = explode('.', $this->list->filename);
         $extension = array_pop($filename_parts);
-        $export_filename = implode('.', $filename_parts) . '-signed-' . time() .'.' . $extension;
+        $export_filename = implode('.', $filename_parts) . '-signed-' . time();
 
         $signedStrings = $this->list->signedStrings->map(function($model) {
             return ['text' => $model->text, 'base64' => $model->base64];
