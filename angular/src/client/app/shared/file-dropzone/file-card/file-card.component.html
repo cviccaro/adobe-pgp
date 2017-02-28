@@ -4,7 +4,7 @@
         <div class="md-card-header-text">
             <md-card-title>{{ file.filename }}</md-card-title>
             <md-card-subtitle>
-                <span class="date">{{ file.date}}</span>
+                <span class="date">{{ file.date | amDateFormat: 'LL' }}</span>
                 <span class="filesize">{{ file.filesize() }} KB</span>
             </md-card-subtitle>
         </div>
@@ -12,7 +12,7 @@
     <md-icon *ngIf="!file.id" class="new md-18">star</md-icon>
     <div class="shade" *ngIf="actions">
         <span class="remove" jpaActionDelegateDirective (click)="remove($event)">
-        <md-icon>delete_forever</md-icon>
+            <md-icon>delete_forever</md-icon>
         </span>
     </div>
     <ng-content></ng-content>

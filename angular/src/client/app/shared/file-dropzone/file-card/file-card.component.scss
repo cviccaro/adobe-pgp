@@ -13,6 +13,15 @@
         }
     }
 
+    .mat-card-header-text:empty {
+        display: none;
+    }
+
+    jpa-file-icon {
+        position: relative;
+        left: -20px;
+    }
+
     .shade {
         transition: all 250ms linear;
         display: block;
@@ -25,7 +34,7 @@
     }
     .new {
         position: absolute;
-        top: 5px;
+        top: 24px;
         right: 5px;
         color: #106cc8;
     }
