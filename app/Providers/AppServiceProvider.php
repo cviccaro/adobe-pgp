@@ -31,8 +31,11 @@ class AppServiceProvider extends ServiceProvider
 
                     $estimate = null;
 
-                    if (\File::exists(storage_path('signed-string-job-last-completed.json'))) {
-                        $json = json_decode(\File::get(storage_path('signed-string-job-last-completed.json')));
+                    $filename = 'progress-list-' . $command->list_id . '.json';
+                    $filepath = storage_path($filename);
+
+                    if (\File::exists($filepath)) {
+                        $json = json_decode(\File::get($filepath));
                         if (is_object($json)) {
                             $diff = Carbon::now()->diffInSeconds(Carbon::createFromTimestamp($json->last_time));
                             if ($diff) {
@@ -53,7 +56,7 @@ class AppServiceProvider extends ServiceProvider
                             }
                         }
                     }
-                    \File::put(storage_path('signed-string-job-last-completed.json'), json_encode(['last_time' => time()]));
+                    \File::put($filepath, json_encode(['last_time' => time()]));
 
 //                    \Log::info(sprintf(
 //                        'SignStringJob# --- Completed item %d of %d on list %s.  TIme left (estimate): %s',
@@ -66,7 +69,7 @@ class AppServiceProvider extends ServiceProvider
                     if ($list->progress == $list->rows) {
                         $job = (new ExportSignedList($list))->onQueue('list');
                         dispatch($job);
-                        \Log::info('SignStringJob# --- Completed list ' . $list->filename . '!  Dispatching ExportSignedList job.');
+                        //\Log::info('SignStringJob# --- Completed list ' . $list->filename . '!  Dispatching ExportSignedList job.');
                     }
                 }
             }
