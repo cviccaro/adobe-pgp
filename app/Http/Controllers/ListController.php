@@ -9,12 +9,13 @@ use App\Http\Requests;
 
 class ListController extends Controller
 {
-    public function uploadAndParse(Request $request) {
+    public function uploadAndParse(Request $request)
+    {
         \Log::info('UploadAndParse Request: ' . print_r($request->toArray(), true));
         $files = $request->allFiles();
 
         $lists = [];
-        foreach($files['file'] as $file) {
+        foreach ($files['file'] as $file) {
             $path = $file->path();
             $lists[] = [
                 'data' => \Excel::load($path)->get(),
@@ -22,16 +23,20 @@ class ListController extends Controller
             ];
         }
 
+        \Log::info('List outputting: ' . print_r($lists, true));
+
         return response(['lists' => $lists]);
     }
 
-    public function get(Request $request, $id) {
+    public function get(Request $request, $id)
+    {
         $list = UploadedList::findOrFail($id);
 
         return response($list);
     }
 
-    public function queued(Request $request) {
+    public function queued(Request $request)
+    {
         $current_page = $request->input('current_page', 1) - 1;
         $length = $request->input('length', 15);
         $order_by = $request->input('order_by', 'created_at');
@@ -50,7 +55,7 @@ class ListController extends Controller
                 default:
                     return $model->{$order_by};
             }
-        }, SORT_REGULAR, $descending)->map(function($model) {
+        }, SORT_REGULAR, $descending)->map(function ($model) {
             $model->complete = intval($model->complete);
             $model->rows = intval($model->rows);
             $model->progress = min($model->rows, intval($model->progress));

@@ -42,7 +42,10 @@ class SignList extends Job implements ShouldQueue
 
         foreach($data as $datum) {
             $email = array_values($datum)[0];
+            \Log::info('Creating new SignString job on List ID ' . $list_obj->id . ' for text ' . $email);
             $job = (new SignString($list_obj->id, $email))->onQueue('string');
+
+            \Log::info('SignString job created on List ID ' . $list_obj->id . ' for text ' . $email . '.  Dispatching.');
             dispatch($job);
         }
     }

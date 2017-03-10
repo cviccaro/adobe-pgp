@@ -33,6 +33,7 @@ class SignString extends Job implements ShouldQueue
      */
     public function handle()
     {
+        \Log::info('SignString with list_id ' . $this->list_id . ' being signed.  Text is ' . $this->text);
         $gpg = new \Crypt_GPG();
         $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
         $gpg->addSignKey(env('PGP_KEY'), $pass);
@@ -44,5 +45,6 @@ class SignString extends Job implements ShouldQueue
             'base64' => $base64,
             'list_id' => $this->list_id
         ]);
+        \Log::info('SignedString created with ID ' . $string->id . ' from text ' . $this->text);
     }
 }

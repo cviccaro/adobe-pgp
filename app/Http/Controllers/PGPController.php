@@ -139,10 +139,13 @@ class PGPController extends Controller
     }
 
     public function signManyQueued(Request $request) {
+        \Log::info('Request received to sign many lists in a queue.');
         if ($request->has('lists')) {
             $lists = $request->get('lists');
             foreach($lists as $list) {
+                \Log::info('Creating a new SignList job with list ' . $list['file']);
                 $job = (new SignList($list))->onQueue('list');
+                \Log::info('New SignList Job created for ' . $list['file'] . '!  Dispatching.');
                 $this->dispatch($job);
             }
             return response(['success' => true]);
