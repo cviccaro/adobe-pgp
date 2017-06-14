@@ -18,14 +18,30 @@ class ListController extends Controller
         foreach ($files['file'] as $file) {
             $path = $file->path();
             $lists[] = [
-                'data' => \Excel::load($path)->get(),
+                'data' => $this->loadListData($path),
                 'file' => $file->getClientOriginalName()
             ];
         }
 
-        \Log::info('List outputting: ' . print_r($lists, true));
+//        \Log::info('List outputting: ' . print_r($lists, true));
 
         return response(['lists' => $lists]);
+    }
+
+    private function loadListData($path) {
+        $data = \Excel::load($path)->get();
+
+        $cleaned = [];
+
+        foreach($data as $i => $row) {
+            if (isset($row->email) && !is_null($row->email)) {
+                $cleaned[] = $row;
+            } else {
+                \Log::info('Skipping row ' . $i . ' because email column is null or doesnt exist');
+            }
+        }
+
+        return $cleaned;
     }
 
     public function get(Request $request, $id)

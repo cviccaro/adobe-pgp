@@ -33,18 +33,22 @@ class SignString extends Job implements ShouldQueue
      */
     public function handle()
     {
-        \Log::info('SignString with list_id ' . $this->list_id . ' being signed.  Text is ' . $this->text);
-        $gpg = new \Crypt_GPG();
-        $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
-        $gpg->addSignKey(env('PGP_KEY'), $pass);
-        $armored = $gpg->sign($this->text, \Crypt_GPG::SIGN_MODE_NORMAL, true);
-        $base64 = base64_encode($gpg->sign($this->text, \Crypt_GPG::SIGN_MODE_NORMAL, false));
-        $string = SignedString::create([
-            'text' => $this->text,
-            'armored' => $armored,
-            'base64' => $base64,
-            'list_id' => $this->list_id
-        ]);
-        \Log::info('SignedString created with ID ' . $string->id . ' from text ' . $this->text);
+        if (!is_null($this->text)) {
+            \Log::info('SignString with list_id ' . $this->list_id . ' being signed.  Text is ' . $this->text);
+            $gpg = new \Crypt_GPG();
+            $pass = \File::get(base_path(env('PGP_PASSPHRASE_FILE')));
+            $gpg->addSignKey(env('PGP_KEY'), $pass);
+            $armored = $gpg->sign($this->text, \Crypt_GPG::SIGN_MODE_NORMAL, true);
+            $base64 = base64_encode($gpg->sign($this->text, \Crypt_GPG::SIGN_MODE_NORMAL, false));
+            $string = SignedString::create([
+                'text' => $this->text,
+                'armored' => $armored,
+                'base64' => $base64,
+                'list_id' => $this->list_id
+            ]);
+            \Log::info('SignedString created with ID ' . $string->id . ' from text ' . $this->text);
+        } else {
+            \Log::info('Skipping SignString because its null');
+        }
     }
 }
