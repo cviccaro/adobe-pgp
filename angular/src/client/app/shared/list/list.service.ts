@@ -44,13 +44,13 @@ export class ListService {
       }
       options.search = s;
     }
-    console.log('Request to get queued lists: ', {
-      options: options,
-      search: search
-    });
+    // console.log('Request to get queued lists: ', {
+    //   options: options,
+    //   search: search
+    // });
     return this.http.get(`${Config.API}/api/list-queue`, options)
       .map(res => {
-        console.log('Res from server: ', res);
+        // console.log('Res from server: ', res);
         this.xhr.finished();
         return res.json();
       });

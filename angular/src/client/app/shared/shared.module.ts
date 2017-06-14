@@ -9,7 +9,7 @@ import { ToasterModule } from 'angular2-toaster';
 
 import { CacheService } from './cache/index';
 import { CopyContainerComponent } from './copy-container/index';
-import { FileDropzoneComponent, FileIconComponent, FileCardComponent, FileInfoComponent } from './file-dropzone/index';
+import { FileDropzoneComponent, FileIconComponent, FileCardComponent, FileInfoComponent, ActionDelegateDirective } from './file-dropzone/index';
 import { ListInfoComponent, ListService, ListsGuard } from './list/index';
 import { NavbarComponent } from './navbar/index';
 import { PagerComponent } from './pager/index';
@@ -60,7 +60,8 @@ export const APP_MIDDLEWARE = [ ListsGuard ];
     PanelBarSubtitleComponent,
     PanelBarTitleComponent,
     PanelGroupComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ActionDelegateDirective
   ],
   exports: [
     CommonModule,
@@ -84,7 +85,8 @@ export const APP_MIDDLEWARE = [ ListsGuard ];
     PanelBarSubtitleComponent,
     PanelBarTitleComponent,
     PanelGroupComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ActionDelegateDirective
   ]
 })
 export class SharedModule {

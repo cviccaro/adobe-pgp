@@ -19,22 +19,22 @@ import { ManagedFile } from '../file';
     selector: '[jpaActionDelegateDirective]',
 })
 export class ActionDelegateDirective {
-    @Output() clicked = new EventEmitter();
-    @Output() hover = new EventEmitter();
-    @Output() hoverOut = new EventEmitter();
+    @Output() clicked = new EventEmitter<Event>();
+    @Output() hover = new EventEmitter<Event>();
+    @Output() hoverOut = new EventEmitter<Event>();
 
     constructor(public el: ElementRef) { }
 
-    @HostListener('click')
+    @HostListener('click', ['$event'])
     onClick(e: Event) {
         this.clicked.emit(e);
     }
-    @HostListener('mouseenter')
+    @HostListener('mouseenter', ['$event'])
     onMouseEnter(e: Event) {
         this.hover.emit(e);
     }
 
-    @HostListener('mouseleave')
+    @HostListener('mouseleave', ['$event'])
     onMouseLeaver(e: Event) {
         this.hoverOut.emit(e);
     }
