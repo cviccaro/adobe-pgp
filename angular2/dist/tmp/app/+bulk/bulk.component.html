@@ -1,0 +1,21 @@
+<md-card class="upload-card">
+    <md-card-title>Upload</md-card-title>
+    <md-card-subtitle>1-Column CSV or XLS</md-card-subtitle>
+    <apgp-file-dropzone #dropzone [acceptExtensions]="['xlsx', 'xls', 'csv']" [display]="false"></apgp-file-dropzone>
+</md-card>
+<md-card *ngIf="dropzone.files.length">
+    <md-card-title>{{ dropzone.files.length }} files</md-card-title>
+    <md-card-subtitle>XLS or CSV</md-card-subtitle>
+    <md-grid-list cols="4" rowHeight="104px" gutterSize="8px">
+        <md-grid-tile *ngFor="let file of dropzone.files; let index = index;">
+            <jpa-file-card
+                    [file]="file"
+                    [index]="index"
+                    (clickedRemove)="handleClickedRemove($event)">
+            </jpa-file-card>
+        </md-grid-tile>
+    </md-grid-list>
+    <div class="form-actions">
+        <button md-raised-button class="submit" (click)="preview()" color="primary"><md-icon>pageview</md-icon>&nbsp;&nbsp;Preview</button>
+    </div>
+</md-card>

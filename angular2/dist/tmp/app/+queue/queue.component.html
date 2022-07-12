@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="section-header">
+        <div class="section-titles">
+            <h2 class="section-title">Bulk Queue</h2>
+            <h4 class="section-subtitle" *ngIf="queue.length">Showing {{ page.from }} - {{ page.to }} of {{ page.total }}</h4>
+        </div>
+        <span class="filler"></span>
+        <div class="section-pagination">
+            <div class="pagination-option">
+                <label for="length">Per Page</label>
+                <select id="length" [(ngModel)]="page.length" name="length" (change)="perPageChanged()">
+                    <option *ngFor="let i of [5,10,15,25,50,100]" [value]="i">{{ i }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <md-list dense *ngIf="queue.length">
+        <md-list-item *ngFor="let list of queue">
+            <md-icon *ngIf="!list.complete && list.progress === 0" md-list-avatar>hourglass_empty</md-icon>
+            <md-icon *ngIf="!list.complete && list.progress > 0" md-list-avatar class="spin pending">update</md-icon>
+            <md-icon *ngIf="list.complete" class="success" md-list-avatar>check_circle</md-icon>
+            <h3 md-line>{{ list.filename }}</h3>
+            <p md-line>{{ list.rows }} rows</p>
+            <p md-line>{{ list.created_at | amCalendar }}</p>
+            <div class="list-status">
+                <div class="list-percent">{{ list.progress / list.rows | percent:'1.0-2' }}</div>
+                <div class="list-progress-wrapper">
+                    <span class="list-progress">{{ list.progress }} completed</span>
+                    <span class="list-total">/ {{ list.rows }} total</span>
+                </div>
+            </div>
+            <span class="filler"></span>
+            <div class="list-time-left" *ngIf="!list.complete && list.time_left">
+                {{ list.time_left }} left&hellip;
+            </div>
+            <div class="list-actions" *ngIf="list.complete">
+                <button md-icon-button color="accent" title="Download {{ list.filename }} Signed" (click)="download(list)">
+                    <md-icon>file_download</md-icon>
+                </button>
+            </div>
+        </md-list-item>
+    </md-list>
+    <div class="empty" *ngIf="queue.length === 0">
+        There are no items in the queue.
+    </div>
+    <jpa-pager
+        [pagerData]="page"
+        (pageChanged)="pageChanged($event)">
+    </jpa-pager>
+</div>

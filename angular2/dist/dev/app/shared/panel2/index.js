@@ -1,0 +1,21 @@
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require('./bar/index'));
+__export(require('./content/index'));
+__export(require('./panel2.component'));
+var panel2_component_2 = require('./panel2.component');
+var index_3 = require('./bar/index');
+var index_4 = require('./content/index');
+var index_5 = require('./group/index');
+exports.PANEL2_DIRECTIVES = [
+    index_3.PanelBarComponent,
+    index_3.PanelBarTitleComponent,
+    index_3.PanelBarSubtitleComponent,
+    index_4.PanelContentComponent,
+    panel2_component_2.PanelComponent,
+    index_5.PanelGroupComponent
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zaGFyZWQvcGFuZWwyL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxpQkFBYyxhQUFhLENBQUMsRUFBQTtBQUM1QixpQkFBYyxpQkFBaUIsQ0FBQyxFQUFBO0FBQ2hDLGlCQUFjLG9CQUFvQixDQUFDLEVBQUE7QUFFbkMsaUNBQStCLG9CQUFvQixDQUFDLENBQUE7QUFDcEQsc0JBQXFGLGFBQWEsQ0FBQyxDQUFBO0FBQ25HLHNCQUFzQyxpQkFBaUIsQ0FBQyxDQUFBO0FBQ3hELHNCQUFvQyxlQUFlLENBQUMsQ0FBQTtBQUV2Qyx5QkFBaUIsR0FBVTtJQUNwQyx5QkFBaUI7SUFDakIsOEJBQXNCO0lBQ3RCLGlDQUF5QjtJQUN6Qiw2QkFBcUI7SUFDckIsaUNBQWM7SUFDZCwyQkFBbUI7Q0FDdEIsQ0FBQyIsImZpbGUiOiJhcHAvc2hhcmVkL3BhbmVsMi9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vYmFyL2luZGV4JztcclxuZXhwb3J0ICogZnJvbSAnLi9jb250ZW50L2luZGV4JztcclxuZXhwb3J0ICogZnJvbSAnLi9wYW5lbDIuY29tcG9uZW50JztcclxuXHJcbmltcG9ydCB7IFBhbmVsQ29tcG9uZW50IH0gZnJvbSAnLi9wYW5lbDIuY29tcG9uZW50JztcclxuaW1wb3J0IHsgUGFuZWxCYXJDb21wb25lbnQsIFBhbmVsQmFyVGl0bGVDb21wb25lbnQsIFBhbmVsQmFyU3VidGl0bGVDb21wb25lbnQgfSBmcm9tICcuL2Jhci9pbmRleCc7XHJcbmltcG9ydCB7IFBhbmVsQ29udGVudENvbXBvbmVudCB9IGZyb20gJy4vY29udGVudC9pbmRleCc7XHJcbmltcG9ydCB7IFBhbmVsR3JvdXBDb21wb25lbnQgfSBmcm9tICcuL2dyb3VwL2luZGV4JztcclxuXHJcbmV4cG9ydCBjb25zdCBQQU5FTDJfRElSRUNUSVZFUzogYW55W10gPSBbXHJcbiAgICBQYW5lbEJhckNvbXBvbmVudCxcclxuICAgIFBhbmVsQmFyVGl0bGVDb21wb25lbnQsXHJcbiAgICBQYW5lbEJhclN1YnRpdGxlQ29tcG9uZW50LFxyXG4gICAgUGFuZWxDb250ZW50Q29tcG9uZW50LFxyXG4gICAgUGFuZWxDb21wb25lbnQsXHJcbiAgICBQYW5lbEdyb3VwQ29tcG9uZW50XHJcbl07XHJcbiJdfQ==

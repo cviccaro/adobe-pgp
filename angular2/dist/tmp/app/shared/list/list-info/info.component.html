@@ -1,0 +1,37 @@
+<jpa-panel2>
+    <jpa-panel2-bar>
+        <jpa-panel2-bar-title>
+            {{ list.managedFile.filename }}
+            <button md-icon-button color="accent" *ngIf="list.signed" (click)="download(list.signed.url, $event)" title="Download Signed {{ list.managedFile.filename }}">
+                <md-icon>file_download</md-icon>
+            </button>
+        </jpa-panel2-bar-title>
+        <jpa-panel2-bar-subtitle>{{ list.data.length }} emails</jpa-panel2-bar-subtitle>
+    </jpa-panel2-bar>
+    <jpa-panel2-content class="row" [ngSwitch]="stage">
+        <template [ngSwitchCase]="1">
+            <ul>
+                <li *ngFor="let datum of list.data; let index = index">{{email(datum)}}</li>
+            </ul>
+        </template>
+        <template [ngSwitchCase]="2">
+            <div class="col-md-4" *ngFor="let datum of list.data; let index = index;">
+                <h4>{{ email(datum) }}</h4>
+                <md-tab-group *ngIf="list.signed">
+                    <md-tab>
+                        <template md-tab-label>Armored</template>
+                        <template md-tab-content>
+                            <apgp-copy-container [text]="list.signed.data[index].signed.armored"></apgp-copy-container>
+                        </template>
+                    </md-tab>
+                    <md-tab>
+                        <template md-tab-label>Base64</template>
+                        <template md-tab-content>
+                            <apgp-copy-container class="contain" [text]="list.signed.data[index].signed.base64"></apgp-copy-container>
+                        </template>
+                    </md-tab>
+                </md-tab-group>
+            </div>
+        </template>
+    </jpa-panel2-content>
+</jpa-panel2>

@@ -1,0 +1,2 @@
+:host{transition:all .25s linear;display:block;padding:16px;margin:0;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);will-change:box-shadow;position:relative;border-radius:2px;background:#fff}:host.expanded .toggle md-icon{color:#106cc8;-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}
+/*# sourceMappingURL=panel2.component.css.map */

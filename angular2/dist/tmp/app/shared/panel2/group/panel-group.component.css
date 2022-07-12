@@ -1,0 +1,2 @@
+:host{display:block;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);will-change:box-shadow;transition:all .25s linear;position:relative}:host.child-expanded{box-shadow:none;-webkit-box-shadow:none}:host.child-expanded .jpa-panel{box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)}:host .jpa-panel{box-shadow:none}:host .jpa-panel.expanded{margin-bottom:24px}:host .jpa-panel.jpa-panel.expanded{margin-top:24px}
+/*# sourceMappingURL=panel-group.component.css.map */

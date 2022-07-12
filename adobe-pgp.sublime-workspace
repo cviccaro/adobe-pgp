@@ -1,0 +1,1448 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"resize",
+				"resizeTimer"
+			],
+			[
+				"app",
+				"appState"
+			],
+			[
+				"acti",
+				"activeIndex"
+			],
+			[
+				"active",
+				"activeSlideCmp"
+			],
+			[
+				"ac",
+				"activeSlide"
+			],
+			[
+				"sub",
+				"subscribe"
+			],
+			[
+				"transition",
+				"transitionEnded"
+			],
+			[
+				"activeS",
+				"activeSlideCmp"
+			],
+			[
+				"Event",
+				"EventEmitter"
+			],
+			[
+				"RouterState",
+				"RouterStateSnapshot\talias"
+			],
+			[
+				"Ac",
+				"ActivatedRouteSnapshot\talias"
+			],
+			[
+				"text",
+				"text-shadow: "
+			],
+			[
+				"bypas",
+				"bypassSecurityTrustHtml\tmethod"
+			],
+			[
+				"bypassSecurityTr",
+				"bypassSecurityTrustStyle\tmethod"
+			],
+			[
+				"byp",
+				"bypassSecurityTrustUrl\tmethod"
+			],
+			[
+				"body_",
+				"body_right\tproperty"
+			],
+			[
+				"by",
+				"bypassSecurityTrustHtml\tmethod"
+			],
+			[
+				"Wor",
+				"WordpressPage\tinterface"
+			],
+			[
+				"W",
+				"WordpressPage\tinterface"
+			],
+			[
+				"add_meta",
+				"add_meta_box〔function〕"
+			],
+			[
+				"route",
+				"routeChanged\tproperty"
+			],
+			[
+				"stored_meta",
+				"$stored_meta_setting〔variable〕"
+			],
+			[
+				"padidng-",
+				"padding-top: "
+			],
+			[
+				"Sa",
+				"SafeHtml\talias"
+			],
+			[
+				"slide",
+				"slide_image_url\tproperty"
+			],
+			[
+				"Wordp",
+				"WordpressMenuItem\tinterface"
+			],
+			[
+				"Router",
+				"RouterOutlet\talias"
+			],
+			[
+				"App",
+				"AppStateInstance\talias"
+			],
+			[
+				"backgron",
+				"background-color: "
+			],
+			[
+				"paragra",
+				"paragraph-font-size"
+			],
+			[
+				"te",
+				"text-decoration: "
+			],
+			[
+				"backgorun",
+				"background-position: "
+			],
+			[
+				"align-",
+				"align-items: "
+			],
+			[
+				"ta",
+				"tagsFetched\tproperty"
+			],
+			[
+				"Conten",
+				"ContentChildren\talias"
+			],
+			[
+				"Tags",
+				"TagController@options"
+			],
+			[
+				"string",
+				"stringify"
+			],
+			[
+				"SY",
+				"SYSTEM_BUILDER_CONFIG\tproperty"
+			],
+			[
+				"SimpleCh",
+				"SimpleChanges\talias"
+			],
+			[
+				"Inject",
+				"Injectable\tinterface"
+			],
+			[
+				"Rec",
+				"RecaptchaModule\tclass"
+			],
+			[
+				"Inj",
+				"Injectable\tinterface"
+			],
+			[
+				"Moda",
+				"ModalFormImagePreviewDirective\tclass"
+			],
+			[
+				"rea",
+				"readAsDataURL\tmethod"
+			],
+			[
+				"AfterView",
+				"AfterViewInit\talias"
+			],
+			[
+				"encode",
+				"encodeURIComponent\tfunction"
+			],
+			[
+				"no-p",
+				"no-repeat"
+			],
+			[
+				"back",
+				"background-repeat: "
+			],
+			[
+				"Scroll",
+				"ScrollToComponent\tclass"
+			],
+			[
+				"BLogs",
+				"BlogsGuard\talias"
+			],
+			[
+				"Po",
+				"ProjectGuard\tclass"
+			],
+			[
+				"Blog",
+				"BlogGuard\tclass"
+			],
+			[
+				"Pro",
+				"ProjectService\tclass"
+			],
+			[
+				"Project",
+				"ProjectGuard\tclass"
+			],
+			[
+				"Projec",
+				"ProjectComponent\tclass"
+			],
+			[
+				"has",
+				"hasSummaryOrBody\tproperty"
+			],
+			[
+				"Galler",
+				"GalleryItemDirective\talias"
+			],
+			[
+				"MapC",
+				"MapControlComponent\talias"
+			],
+			[
+				"Mob",
+				"MobileMenuTriggerComponent\talias"
+			],
+			[
+				"Mobile",
+				"MobileMenuItemDirective\talias"
+			],
+			[
+				"Mo",
+				"MobileMenuTriggerComponent\tclass"
+			],
+			[
+				"IconBu",
+				"IconButtonTextComponent\talias"
+			],
+			[
+				"Ball",
+				"BalloonCalloutComponent\talias"
+			],
+			[
+				"Social",
+				"SOCIAL_COMPONENTS\tconst"
+			],
+			[
+				"Link",
+				"LinkedInButtonComponent\talias"
+			],
+			[
+				"gra",
+				"graphic-design"
+			],
+			[
+				"inn",
+				"innerWidth\tproperty"
+			],
+			[
+				"con",
+				"console\tvar"
+			],
+			[
+				"Navb",
+				"NavbarService\tclass"
+			],
+			[
+				"Re",
+				"RecaptchaModule\tclass"
+			],
+			[
+				"Googl",
+				"SebmGoogleMap\talias"
+			],
+			[
+				"Elemen",
+				"ElementRef\talias"
+			],
+			[
+				"directions",
+				"directionsEl\tproperty"
+			],
+			[
+				"scrolT",
+				"scrollToSelector\tmethod"
+			],
+			[
+				"Nav",
+				"NavbarService\tclass"
+			],
+			[
+				"conf",
+				"confLiteral\tparameter"
+			],
+			[
+				"LazyMaps",
+				"LazyMapsAPILoaderConfigLiteral\tinterface"
+			],
+			[
+				"Divi",
+				"DivisionGuard\tclass"
+			],
+			[
+				"SYSTEM",
+				"SYSTEM_CONFIG_DEV\tproperty"
+			],
+			[
+				"Modal",
+				"ModalModule\talias"
+			],
+			[
+				"Ballon",
+				"BalloonCalloutComponent"
+			],
+			[
+				"Ballo",
+				"BalloonCalloutComponent"
+			],
+			[
+				"callout",
+				"calloutIcons2"
+			],
+			[
+				"AFterView",
+				"AfterViewInit\talias"
+			],
+			[
+				"HO",
+				"HostBinding\tvar"
+			],
+			[
+				"background",
+				"background-position: "
+			],
+			[
+				"jp-icon",
+				"jp-icon-hover"
+			],
+			[
+				"nav",
+				"navbarWasListening\tproperty"
+			],
+			[
+				"H",
+				"HammerGestureConfig\tclass"
+			],
+			[
+				"wo",
+				"workIndex\tproperty"
+			],
+			[
+				"DIRE",
+				"DIRECTION_ALL\tproperty"
+			],
+			[
+				"MdR",
+				"MdRippleModule\talias"
+			],
+			[
+				"SYSTEM_CON",
+				"SYSTEM_CONFIG_DEV\tproperty"
+			],
+			[
+				"set",
+				"setTitle\tmethod"
+			],
+			[
+				"st",
+				"startTracking\tmethod"
+			],
+			[
+				"MdP",
+				"MdProgressBarModule\tclass"
+			],
+			[
+				"Obs",
+				"Observable\talias"
+			],
+			[
+				"R",
+				"RouterState\talias"
+			],
+			[
+				"page",
+				"pageYOffset\tproperty"
+			],
+			[
+				"uns",
+				"unsnapTimer\tlet"
+			],
+			[
+				"transition-",
+				"transition-delay: "
+			],
+			[
+				"Descr",
+				"Description"
+			],
+			[
+				"align",
+				"align-items: "
+			],
+			[
+				"max-",
+				"max-width: "
+			],
+			[
+				"imgChevron",
+				"imgChevronDescription"
+			],
+			[
+				"form-sub",
+				"form-subgroup-title"
+			],
+			[
+				"minut",
+				"minute_diff\tlet"
+			],
+			[
+				"getTime",
+				"getTimezoneOffset\tmethod"
+			],
+			[
+				"el",
+				"elBoundingRect\tlet"
+			],
+			[
+				"Panel",
+				"PanelFormControlDragnDrop\tclass"
+			],
+			[
+				"Managed",
+				"ManagedFile\talias"
+			],
+			[
+				"Divis",
+				"Division\tclass"
+			],
+			[
+				"too",
+				"tooltips\tlet"
+			],
+			[
+				"querySe",
+				"querySelectorAll\tmethod"
+			],
+			[
+				"_su",
+				"_summaries\tproperty"
+			],
+			[
+				"PanelForm",
+				"PanelFormControlSummaryComponent\talias"
+			],
+			[
+				"summ",
+				"summaryNew\tgetter"
+			],
+			[
+				"deb",
+				"debounceTime\tproperty"
+			],
+			[
+				"_summ",
+				"_summarySource\tproperty"
+			],
+			[
+				"l",
+				"log\tproperty"
+			],
+			[
+				"n",
+				"name\tproperty"
+			],
+			[
+				"RouterS",
+				"RouterStateSnapshot\talias"
+			],
+			[
+				"Auth",
+				"AuthService\tclass"
+			],
+			[
+				"REg",
+				"RegistersSubscribers\talias"
+			],
+			[
+				"Pager",
+				"PagerData\tinterface"
+			],
+			[
+				"getExter",
+				"getExternalScssStream\tfunction"
+			],
+			[
+				"des",
+				"destroySub\tproperty"
+			],
+			[
+				"remove",
+				"removeEventListener\tmethod"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "convert",
+		"selected_items":
+		[
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert ",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conv",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"phpbea",
+				"PHP Coding Standards Fixer: Fix this file (PHP Code Beautifier)"
+			],
+			[
+				"convert sp",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"jsbea",
+				"Javascript Beautify"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"sassb",
+				"SassBeautify"
+			],
+			[
+				"convert to",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"convert t",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"format doc",
+				"TypeScript: Format Document"
+			],
+			[
+				"convert to ",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"typescript format",
+				"TypeScript: Format Document"
+			],
+			[
+				"enable pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"typ",
+				"TypeScript: Show Error List"
+			],
+			[
+				"disable pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"codeintel",
+				"SublimeCodeIntel: Reset"
+			],
+			[
+				"typescript",
+				"TypeScript: Show Error List"
+			],
+			[
+				"material",
+				"Material Theme: Configuration"
+			],
+			[
+				"enable ",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"disable lin",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"disable li",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"tslint",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"gutter",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"format sc",
+				"CodeFormatter: Format as SCSS Syntax"
+			],
+			[
+				"linter",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"choose lin",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"Gutter",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"format docu",
+				"TypeScript: Format Document"
+			],
+			[
+				"format",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"format d",
+				"TypeScript: Format Document"
+			],
+			[
+				"convert to sp",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"sublime settings",
+				"Side-by-Side: Sublime Settings"
+			],
+			[
+				"gulp",
+				"Gulp: Run arbitrary task"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"jasmine",
+				"Snippet: jasmine-createSpy"
+			],
+			[
+				"gutter theme",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list package",
+				"Package Control: Install Package"
+			],
+			[
+				"themes",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"sidebar",
+				"Side Bar: Refresh"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"tmpl",
+				"Tmpl: Create Drupal javascript"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 290.0,
+		"history":
+		[
+			"view.run_command('example');",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Chris/web/adobe-pgp",
+		"/C/Users/Chris/web/adobe-pgp/angular",
+		"/C/Users/Chris/web/adobe-pgp/angular/dist",
+		"/C/Users/Chris/web/adobe-pgp/angular/src",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone/file-card",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/pgp",
+		"/C/Users/Chris/web/adobe-pgp/angular/tools",
+		"/C/Users/Chris/web/adobe-pgp/angular/tools/config",
+		"/C/Users/Chris/web/adobe-pgp/angular/tools/env",
+		"/C/Users/Chris/web/adobe-pgp/app",
+		"/C/Users/Chris/web/adobe-pgp/app/Console",
+		"/C/Users/Chris/web/adobe-pgp/app/Console/Commands",
+		"/C/Users/Chris/web/adobe-pgp/app/Http",
+		"/C/Users/Chris/web/adobe-pgp/app/Http/Controllers",
+		"/C/Users/Chris/web/adobe-pgp/app/Jobs",
+		"/C/Users/Chris/web/adobe-pgp/app/Providers",
+		"/C/Users/Chris/web/adobe-pgp/storage",
+		"/C/Users/Chris/web/adobe-pgp/storage/logs"
+	],
+	"file_history":
+	[
+		"/G/VRP/Games/ege DistantPlanet oculus+touch 1.9.2b/credits.txt",
+		"/C/Users/Chris/Documents/aca-v-ahca,txt",
+		"/C/Users/Chris/Documents/Dark/dark.txt",
+		"/C/Users/Chris/Documents/Dark/platinum45.txt",
+		"/G/VRP/Videos/VRGirlz/Chloe-09-Sec07_2k_vr/readme.txt",
+		"/C/Users/Chris/Downloads/Torrents/Visual Studio 2017 Enterprise/Visual Studio 2017 Enterprise.txt",
+		"/C/Users/Chris/web/jp6a2/package.json",
+		"/C/Users/Chris/web/adobe-pgp/angular/package.json",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/css/theme.scss",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone/file-card/file-card.component.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone/file-dropzone.html",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/shared.module.ts",
+		"/C/Users/Chris/web/adobe-pgp/app/Http/Controllers/ListController.php",
+		"/C/Users/Chris/web/adobe-pgp/storage/logs/laravel.log",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/list/list-info/info.component.html",
+		"/C/Users/Chris/Documents/rosenstein-june13.txt",
+		"/c/users/chris/web/adobe-pgp/angular/src/client/app/shared/list/list.service.ts",
+		"/c/users/chris/web/adobe-pgp/angular/src/client/app/queue/queue.component.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/dist/tmp/app/shared/file-dropzone/file-card/file-card.component.ngfactory.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/list/list-info/info.component.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone/file-dropzone.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/file-dropzone/file-card/file-card.component.html",
+		"/C/Users/Chris/web/adobe-pgp/angular/tools/env/prod.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/tools/config/project.config.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/src/client/app/shared/pgp/pgp.service.ts",
+		"/C/Users/Chris/web/adobe-pgp/angular/LICENSE",
+		"/C/Users/Chris/web/Logins/pgp.jpenterprises.com.txt",
+		"/C/Users/Chris/web/Logins/whm_jpenterprises.com.txt",
+		"/C/Users/Chris/web/adobe-pgp/ftpsync.settings",
+		"/C/Users/Chris/web/adobe-pgp/app/Providers/AppServiceProvider.php",
+		"/C/Users/Chris/web/adobe-pgp/app/Jobs/ExportSignedList.php",
+		"/C/Users/Chris/web/adobe-pgp/.env",
+		"/C/Users/Chris/web/adobe-pgp/angular/node_modules/@angular/material/_theming.scss",
+		"/C/Users/Chris/web/adobe-pgp/angular/dist/tmp/app/shared/list/list-info/info.component.js",
+		"/C/Users/Chris/web/adobe-pgp/app/Providers/AuthServiceProvider.php",
+		"/C/Users/Chris/web/adobe-pgp/app/Jobs/SignString.php",
+		"/C/Users/Chris/web/adobe-pgp/app/SignedString.php",
+		"/C/Users/Chris/AppData/Roaming/poclbm/poclbm.ini",
+		"/C/BTC/readme.txt",
+		"/C/Users/Chris/AppData/Roaming/Bitcoin/bitcoin.conf",
+		"/C/nginx/mysql/my.ini",
+		"/C/Users/Chris/web/urban-impact/website/wp-config.php",
+		"/C/nginx/sites-available/urban-impact.conf",
+		"/C/Users/Chris/Documents/test.txt",
+		"/G/VRP/Games/HS/HoneySelectVR_0.6/README.md",
+		"/G/VRP/Games/HS/1.10/HoneySelect/README.md",
+		"/C/Program Files (x86)/Steam/config/steamvr.vrsettings",
+		"/C/Users/Chris/web/adobe-pgp/app/Console/Kernel.php",
+		"/C/Users/Chris/web/adobe-pgp/app/Http/Controllers/PGPController.php",
+		"/C/Users/Chris/web/adobe-pgp/app/Jobs/SignList.php",
+		"/C/Users/Chris/web/adobe-pgp/app/Http/routes.php",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.component.scss",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/circle-image-block/circle-image-block.component.scss",
+		"/C/Users/chris/web/urban-impact/website/wp-content/plugins/jp-page-sections/jp-page-sections.php",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/theme-core.php",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.component.ts",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page-section/page-section.component.ts",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page/page.component.ts",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page-section/page-section.component.scss",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slide/slide.component.ts",
+		"/C/Users/chris/web/urban-impact/website/wp-content/plugins/jp-page-sections/views/section.blade.php",
+		"/C/Users/chris/web/urban-impact/website/wp-content/themes/jp-angular/src/styles.scss",
+		"/C/Users/chris/web/urban-impact/source/details.txt",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page-section/page-section.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/variables.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slide/slide.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/circle-image-block/circle-image-block.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/circle-image-block/circle-image-block.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-slider/views/sliders/options.blade.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/navbar/navbar.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page-section/page-section.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page-section/page-section.component.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.component.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-slider/jp-slider.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-slider/views/sliders/meta.blade.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-page-sections/js/page-sections.js",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-page-sections/views/section.blade.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/style.css",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/footer/footer.component.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/footer/footer.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page/page.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page/page.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slide/slide.component.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/styles.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-slider/views/slides/form.blade.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/app.module.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/app-routing.module.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/about/about.component.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/about/about.component.html",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/page/page.guard.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slider.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/navbar/navbar.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/mobile.scss",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/angular-cli.json",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/slider/slide/slide.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/app.service.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/src/app/shared/footer/footer.component.ts",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/theme-core.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/plugins/jp-page-sections/jp-page-sections.php",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/node_modules/hammerjs/hammer.js",
+		"/Users/cviccaro/web/urban-impact/website/wp-content/themes/jp-angular/tslint.json",
+		"/Users/cviccaro/web/widia-posters/website/.env",
+		"/Users/cviccaro/web/kmt-marketing/website/src/client/index.html",
+		"/Users/cviccaro/web/widia-posters/website/angular/tools/env/prod.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/models/apiConfig.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/config/env.config.ts",
+		"/Users/cviccaro/web/jpapi/angular/src/client/app/home/home.module.ts",
+		"/Users/cviccaro/web/jpapi/angular/src/client/app/app.component.ts",
+		"/Users/cviccaro/web/jpapi/angular/src/client/app/home/home.routes.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/tools/tasks/project/laravel.angular.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/tools/config/project.config.ts",
+		"/Users/cviccaro/web/widia-posters/website/app/Http/routes.php",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/components/order-form/order-form.component.html",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/services/product.service.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/home/home.component.html",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/components/product/product.component.html",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/components/order-info/order-info.component.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/components/cart/cart.component.html",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/app.component.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/package.json",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/app.module.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/finish/finish.component.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/components/order-form/order-form.component.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/operators.ts",
+		"/Users/cviccaro/web/widia-posters/website/angular/src/client/app/shared/index.ts"
+	],
+	"find":
+	{
+		"height": 21.0
+	},
+	"find_in_files":
+	{
+		"height": 154.0,
+		"where_history":
+		[
+			"c:\\users\\chris\\web\\adobe-pgp\\angular\\src",
+			"",
+			"~/web/urban-impact/website/wp-content/themes/jp-angular",
+			"~/web/",
+			"~/web/widia-posters/website/angular/src",
+			"~/web/widia-posters/website/angular/tools",
+			"~/web/jpapi/angular/tools",
+			"~/web/jpapi/angular/src",
+			"~/web/jpapi/angular/tools",
+			"~/web/jpapi/angular",
+			"~/web/widia-posters/website/angular",
+			"~/web/widia-posters/website/src",
+			"~/web/urban-impact/website/wp-content/plugins/wp-1-slider",
+			"~/web/urban-impact/website/wp-content/themes/jp-angular",
+			"~/web/urban-impact/website/wp-content/themes/ng2-wordpress-theme/",
+			"~/web/jpapi/angular/src",
+			"~/web/jp6a2/node_modules/angular2-google-maps/core/services",
+			"~/web/jp6a2/node_modules/angular2-google-maps/services",
+			"~/web/jp6a2/node_modules/angular2-google-maps",
+			"~/web/jp6a2/node_modules/",
+			"~/web/jp6a2/node_modules/angular2-google-maps",
+			"~/web/jp6a2/src",
+			"~/web/jp6a2/",
+			"~/web/jp6a2/src",
+			"~/web/jpapi/angular/src",
+			"<current file>",
+			"~/web/jp6a2/src/client/app",
+			"~/web/jp6a2/src/",
+			"~/web/jp6a2/src/client/app",
+			"~/web/jp6a2/src/client/app/shared",
+			"~/web/jp6a2/src/client/app",
+			"~/web/jp6a2-divisions/mdm/src/",
+			"~/web/jp6a2-divisions/publishing/src/",
+			"~/web/jp6a2-divisions/interactive/src/",
+			"~/web/jp6a2-divisions/creative/src/",
+			"~/web/angular2-seed",
+			"~/web/jp6a2/",
+			"~/web/jp6a2-seed-rebuild/src/client/app/shared",
+			"~/web/jp6a2/src/client/app/shared",
+			"~/web/jp6a2/src/",
+			"~/web/jpapi/src",
+			"~/web/jp6a2/src",
+			"~/web/jp6a2-divisions/",
+			"~/web/jp6a2/src/",
+			"~/web/jp6a2/src/client",
+			"~/web/jpapi/src/client",
+			"~/web/angular2-seed/",
+			"~/web/angular2-seed/tools",
+			"~/web/angular2-seed",
+			"~/web/jpapi/resources/angular2",
+			"~/web/jpapi/app",
+			"~/web/jpapi/resources/angular2",
+			"~/web/jpapi/resources/angular",
+			"~/web/jp6-admin/bower_components/jp6.core/",
+			"~/web/jpapi/app",
+			"~/web/jpapi/",
+			"~/web/jpapi/vendor",
+			"~/web/TradeshowPortal/src/tsportal",
+			"~/web/TradeshowPortal/test",
+			"test/*",
+			"test",
+			"<current file>",
+			"~/web/TradeshowPortal/test",
+			"~/web/TradeshowPortal/src/tsportal/",
+			"~/web/TradeshowPortal/src/tsportal/app.js",
+			"~/web/TradeshowPortal/src/tsportal",
+			"~/web/TradeshowPortal/src",
+			"~/web/TradeshowPortal/public/js/app.base.js",
+			"~/web/TradeshowPortal/js/app.base.js",
+			"~/web/TradeshowPortal/src/tsportal",
+			"<current file>",
+			"~/web/TradeshowPortal/src/tsportal",
+			"<current file>",
+			"~/web/TradeshowPortal/src/tsportal",
+			"~/web/TradeshowPortal/public/views",
+			"~/web/TradeshowPortal/public",
+			"~/web/TradeshowPortal/src/tsportal/",
+			"~/web/TradeshowPortal/src/tsportal/shared",
+			"~/web/TradeshowPortal/src/tsportal/app.js",
+			"~/web/TradeshowPortal/src/tsportal/",
+			"~/web/TradeshowPortal/src/tsportal/shared",
+			"~/web/TradeshowPortal/src/tsportal/components",
+			"~/web/TradeshowPortal/src/tsportal/shared",
+			"~/web/TradeshowPortal/src/tsportal/app.js",
+			"~/web/TradeshowPortal/src/tsportal/components",
+			"~/web/TradeshowPortal/src/tsportal/shared",
+			"~/web/TradeshowPortal/src/tsportal",
+			"~/web/src/tsportal",
+			"<current file>",
+			"~/web/tradeshowportal/src/tsportal",
+			"~/web/tradeshowportal/public/partials",
+			"~/web/tradeshowportal/src/tsportal",
+			"~/web/tsportal/src/tsportal",
+			"<current file>",
+			"~/web/TradeshowPortal/public/js",
+			"<current file>",
+			"",
+			"<current file>",
+			"~/web/TradeshowPortal/public/js",
+			"~/web/TradeshowPortal",
+			"<current file>",
+			"~/web/TradeshowPortal/",
+			"~/web/TradeshowPortal/public",
+			"~/Sites/TradeshowPortal/public",
+			"~/Sites/TradeshowPortal/resources",
+			"~/Sites/TradeshowPortal/",
+			"~/Sites/TradeshowPortal/public/js",
+			"~/Sites/TradeshowPortal/test",
+			"~/Sites/TradeshowPortal/pubilc/test",
+			"~/Sites/TradeshowPortal/pubilc/js",
+			"<current file>",
+			"",
+			"tradeshowControllersSpec.js",
+			"",
+			"~/Sites/TradeshowPortal/public/js",
+			"controllersSpec2.js",
+			"",
+			"~/Sites/TradeshowPortal/public/partials",
+			"~/Sites/TradeshowPortal/public/js",
+			"<current file>",
+			"",
+			"/Users/cviccaro/web/lewisgoetz.jpedev.com/Website/wp-content/plugins/wp-forms",
+			"/Users/cviccaro/web/EatonStaging/Website/sites/all/modules/eaton_backbone",
+			"/Users/cviccaro/web/EatonStaging/Website/sites/all/themes/Eaton/sass",
+			"/Users/cviccaro/web/EatonStaging/Website/sites/all/themes/Eaton",
+			"/Users/cviccaro/web/EatonStaging/Website",
+			"/Users/cviccaro/web/EatonStaging/Website/sites/all/modules/eaton_backbone/",
+			"/Users/cviccaro/web/EatonStaging/Website/sites/all/modules/eaton_backbone/inc/lib/html2pdf/_tcpdf_5.0.002"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console.",
+			"localeCompare",
+			"~2.4.5",
+			"localeCompare",
+			"localCompare",
+			"1",
+			"button_page_url",
+			"button-thin",
+			"perma",
+			"permalink",
+			"button_text",
+			"col-md-4 ",
+			"col-lg-4 ",
+			"sliders.options",
+			".buttons",
+			"layout-",
+			"image-block",
+			"config",
+			"h1",
+			"jp_slider_option",
+			"slides.form",
+			"renderView",
+			"'slide'",
+			"text_position",
+			"text-position",
+			"66",
+			"75",
+			"66",
+			"OnInit",
+			"AfterViewInit",
+			"OnInit",
+			"opacity",
+			"@HostBinding('style.background-image')",
+			"slug",
+			"API_CONFIG",
+			"operators",
+			"this.config.url",
+			"#product of",
+			"app/shared/components/product",
+			"app/shared/components/order-form",
+			"home",
+			"_router",
+			"kmt",
+			"HomeComponent",
+			".Toast",
+			"kmt-marketing",
+			"$item",
+			"item",
+			"appState",
+			"gigantic",
+			"button-green",
+			"print",
+			"width-50",
+			".thin",
+			"layout-banner",
+			".wide",
+			"first",
+			"left",
+			"body",
+			"first-",
+			"first_section",
+			"jp_page_sections_first",
+			"first",
+			"First",
+			"first",
+			"style",
+			"caption",
+			"title",
+			"Title",
+			"title",
+			"jpslider_meta_option_save",
+			"Blade",
+			") ENGINE=InnoDB DEFAULT;",
+			" ENGINE=InnoDB DEFAULT",
+			"COLLATE utf8mb4_unicode_520_ci",
+			" CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci",
+			"left",
+			"home",
+			"config",
+			"AppService",
+			"get_post_meta",
+			"image",
+			"left",
+			"Left",
+			"left",
+			"text",
+			"right",
+			"left",
+			"Left",
+			"left",
+			"Left",
+			"left",
+			"title",
+			"text",
+			"jp-slider-toolbar-left-text",
+			"array",
+			"jpslider_meta_option_save",
+			"jp_slider_settings_nonce",
+			"banner",
+			"form-wrapper",
+			"jpslider-slide-body",
+			"body",
+			"layout-banner",
+			"jp-slider-slide-form-wrapper",
+			"slide-",
+			"get_post_meta",
+			"jp_slider",
+			"get_post_meta",
+			"register_Config",
+			"slide_class",
+			"wp1s-add-slide-option-wrap",
+			"wp1s_slider_image_url_button",
+			".form",
+			"slide_key",
+			";",
+			"?>",
+			"<?php",
+			"jpslider_option",
+			"renderView",
+			"wp1s_option",
+			"slide-count",
+			"slide_count",
+			"slide_meta",
+			"wp1-slide-count",
+			"count",
+			"wp1s",
+			"wp1s_slider_image_nonce",
+			"meta_save"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"https://api.jpenterprises.com/managed-file/",
+			"/managed-file/images/blogs/",
+			"com/managed-file/images/",
+			"import { Modal } from 'angular2-modal/plugins/bootstrap';",
+			"DomSanitizer",
+			"DomSanitizationService",
+			"DomSanitizer",
+			"DomSanitizor",
+			"DomSanitizationService",
+			"DomSanitizer",
+			"_subscriptions: Subscription[] = [];",
+			"ContextMenuFocusTrapComponent",
+			"ContextMenuItemComponent",
+			"jpaTooltip",
+			"ActionDelegateDirective",
+			"GridImageComponent",
+			"FileUploadToolbarComponent",
+			"DragnDropFormControlComponent",
+			"PanelFormControlSummaryComponent",
+			"per_page",
+			"current_page",
+			"last_page",
+			"CacheService",
+			"./file",
+			"models/file",
+			"Tradeshow",
+			"mockTradeshowResource",
+			"tradeshowService",
+			"tsportal.tradeshow",
+			"['catch']",
+			",",
+			"=>",
+			",",
+			"[\"name\"",
+			"[\"name\"\n        ],",
+			"]\n        ],",
+			"]",
+			"[",
+			"<label class=\"control-label\" for",
+			"class=\"form-control\" name=",
+			"<input type=\"text\" class=\"form-control\"",
+			"form-group",
+			"<br>",
+			"authService",
+			"TradeshowEditController",
+			"LoginController",
+			"views",
+			"authService",
+			"LeadEditController",
+			"TradeshowEditController",
+			"/src/bower_components",
+			"",
+			"vm",
+			";",
+			"\"",
+			"",
+			"busyService",
+			"loginService",
+			"retrieve",
+			"tradeshowService",
+			"leadService",
+			"checkApiAccess",
+			"retrieveLeads",
+			"$scope.orderBy",
+			"myPromise",
+			"_fscarousel_basepath",
+			"_fscarousel_baseurl",
+			"$infoButton",
+			"playTimer",
+			"$_COOKIE['fscarousel-add-new-image']",
+			"fscarousel-button-nav-next",
+			"fscarousel-button-nav-prev",
+			"_currentImage",
+			"_options",
+			"$currentImage",
+			"chapter-menu",
+			"chapterMenu",
+			"= ",
+			"LANGUAGE_NONE",
+			"'][0]",
+			"$data['"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "adobe-pgp.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/Heil (New)/Heil (New).sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1161.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 327.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

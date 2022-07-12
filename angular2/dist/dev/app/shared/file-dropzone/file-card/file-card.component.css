@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  z-index: 10; }
+  :host .md-card-header-text {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+    :host .md-card-header-text md-card-subtitle {
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      :host .md-card-header-text md-card-subtitle span {
+        float: left; }
+  :host .shade {
+    transition: all 250ms linear;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  :host .new {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #106cc8; }
+  :host .remove {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer; }
+    :host .remove md-icon {
+      color: #fff; }
+  :host.actions-hovering .shade {
+    background: rgba(0, 0, 0, 0.54); }
+  :host img {
+    max-width: 100%; }
+  :host.dnd-drag-start {
+    border: 2px dashed rgba(0, 0, 0, 0.54); }
+
+/*# sourceMappingURL=file-card.component.css.map */

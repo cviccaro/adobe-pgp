@@ -1,0 +1,40 @@
+:host {
+  padding: 60px 0 40px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  :host .previous {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+    :host .previous[hidden] {
+      display: none; }
+  :host .next {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+    :host .next[hidden] {
+      display: none; }
+  :host ul {
+    margin: 0 auto;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+    :host ul li a {
+      cursor: pointer;
+      color: #212121; }
+    :host ul .active > a, :host ul .active > a:hover, :host ul .active > a:focus,
+    :host ul .active > a > span,
+    :host ul .active > a > span:hover,
+    :host ul .active > a > span:focus {
+      background-color: #106cc8;
+      border-color: #106cc8;
+      color: #fff; }
+
+/*# sourceMappingURL=pager.component.css.map */

@@ -1,0 +1,74 @@
+:host {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  :host .cards {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 38px; }
+  :host md-card.data md-card-title {
+    font-size: 16px; }
+  :host md-card.data ul {
+    margin: 0; }
+  :host md-card.encrypted {
+    margin-left: 60px;
+    max-width: 800px; }
+    :host md-card.encrypted md-card-title {
+      font-size: 16px; }
+    :host md-card.encrypted pre {
+      border: none;
+      font-size: 12px; }
+  :host .info-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    :host .info-header jpa-file-card {
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      margin-bottom: 24px;
+      margin-left: 24px; }
+  :host jpa-panel2-bar-title,
+  :host jpa-panel2-bar-subtitle {
+    height: 36px; }
+  :host jpa-panel2-bar jpa-panel2-bar-subtitle {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  :host jpa-panel2-content {
+    display: block;
+    padding-top: 36px; }
+  :host table.table td {
+    vertical-align: middle; }
+    :host table.table td.data-preview {
+      padding: 0; }
+      :host table.table td.data-preview apgp-copy-container {
+        max-width: 100%; }
+        :host table.table td.data-preview apgp-copy-container pre {
+          border: none;
+          background: inherit; }
+    :host table.table td.base64-preview apgp-copy-container pre {
+      white-space: normal; }
+  :host ul {
+    -webkit-column-count: 6;
+    -moz-column-count: 6;
+    column-count: 6; }
+    :host ul li {
+      font-size: 14px;
+      line-height: 24px;
+      list-style: disc inside none; }
+
+/*# sourceMappingURL=info.component.css.map */

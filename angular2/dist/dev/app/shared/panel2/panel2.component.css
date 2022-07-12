@@ -1,0 +1,16 @@
+:host {
+  transition: all 250ms linear;
+  display: block;
+  padding: 16px;
+  margin: 0;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  will-change: box-shadow;
+  position: relative;
+  border-radius: 2px;
+  background: white; }
+  :host.expanded .toggle md-icon {
+    color: #106cc8;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg); }
+
+/*# sourceMappingURL=panel2.component.css.map */

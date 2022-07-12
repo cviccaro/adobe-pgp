@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 0 16px; }
+  :host md-input {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  :host form {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  :host md-card {
+    max-width: 600px;
+    margin: 24px 0; }
+    :host md-card.result {
+      max-width: 850px; }
+
+/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/shared/panel2/content/panel-content.component.scss"],"names":[],"mappings":"AAAA,MACI,YAAa,AACb,gBAAkB,CAKrB,AAPD,cAIQ,cAAe,AACf,QAAU,CACb","file":"panel-content.component.css","sourcesContent":[":host {\r\n    height: auto;\r\n    padding-top: 16px;\r\n    .hidden {\r\n        padding-top: 0;\r\n        height: 0;\r\n    }\r\n}"]}

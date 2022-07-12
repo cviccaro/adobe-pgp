@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  padding: 0 16px; }
+  :host md-card {
+    margin-bottom: 36px; }
+  :host .upload-card {
+    max-width: 660px; }
+  :host .apgp-file-dropzone {
+    max-width: 600px; }
+  :host jpa-file-card {
+    width: 100%; }
+
+/*# sourceMappingURL=bulk.component.css.map */

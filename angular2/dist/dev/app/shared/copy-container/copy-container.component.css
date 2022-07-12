@@ -1,0 +1,26 @@
+:host {
+  position: relative;
+  display: block; }
+  :host .copy {
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+    :host .copy md-icon {
+      vertical-align: bottom; }
+  :host pre {
+    padding-right: 96px; }
+  :host.contain pre {
+    white-space: normal; }
+  :host textarea {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    height: 1px;
+    padding: 0;
+    line-height: 0;
+    border: 1px solid transparent;
+    outline: none;
+    outline-width: 0px;
+    outline-color: transparent; }
+
+/*# sourceMappingURL=copy-container.component.css.map */

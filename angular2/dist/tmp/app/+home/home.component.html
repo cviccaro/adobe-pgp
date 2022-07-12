@@ -1,0 +1,30 @@
+<md-card>
+    <md-card-header>
+        <md-card-title>
+            Sign with PGP
+        </md-card-title>
+    </md-card-header>
+    <form (submit)="sign()" #singleForm="ngForm">
+      <md-input [(ngModel)]="input" name="input" placeholder="Email Address" required type="email"></md-input>
+      <button md-button type="submit" [disabled]="singleForm.invalid">Sign</button>
+    </form>
+</md-card>
+
+<md-card *ngIf="result" class="result">
+    <md-card-title>PGP Result</md-card-title>
+    <md-card-subtitle>{{ result.input }}</md-card-subtitle>
+    <md-tab-group>
+        <md-tab>
+            <template md-tab-label>Armored</template>
+            <template md-tab-content>
+                <apgp-copy-container [text]="result.pgp"></apgp-copy-container>
+            </template>
+        </md-tab>
+        <md-tab>
+            <template md-tab-label>Base64</template>
+            <template md-tab-content>
+                <apgp-copy-container class="contain" [text]="result.base64"></apgp-copy-container>
+            </template>
+        </md-tab>
+    </md-tab-group>
+</md-card>

@@ -1,0 +1,19 @@
+<h3 class="page-title">Bulk Upload</h3>
+<h4 class="light page-subtitle">{{ lists.length }} Lists</h4>
+<div class="form-actions">
+    <md-slide-toggle color="accent" [(ngModel)]="useQueue" [disabled]="lockQueue">Queue</md-slide-toggle>
+    <button md-raised-button color="primary" class="submit" (click)="submit()" [ngSwitch]="working" [disabled]="working">
+        <template [ngSwitchCase]="true">
+            <md-icon class="spin">update</md-icon>&nbsp;{{ useQueue ? 'Queueing...' : 'Signing...' }}
+        </template>
+        <template ngSwitchDefault>
+            <md-icon>import_export</md-icon>&nbsp;&nbsp;{{ useQueue ? 'Queue All Lists' : 'Sign All Lists' }}
+        </template>
+    </button>
+    <button *ngIf="submitted" md-raised-button color="accent" class="submit" (click)="downloadAll()">
+        <md-icon>file_download</md-icon>&nbsp;&nbsp;Download Bulk Encrypted
+    </button>
+</div>
+<jpa2-panel-group>
+    <apgp-list-info *ngFor="let list of lists; let index = index;" [list]="list" [index]="index" [hasData]="list.hasData"></apgp-list-info>
+</jpa2-panel-group>
